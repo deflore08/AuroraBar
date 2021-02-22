@@ -1,13 +1,13 @@
 [Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.3b
+ Version                          = 2.1.4b
  Author                           = deflore08 (deflore08@gmail.com) | https://www.deviantart.com/deflore08
  License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
  Information                      = Updater module
 
 [Variables]
- Version                           = 2.1.3b
- Build                             = 2131
+ Version                           = 2.1.4b
+ Build                             = 2141
  New_Build                         = [m.Updater_Parser_Check_Build]
  New_Version                       = [m.Updater_Parser_Check_Version]
  Download_URL                      = https://github.com/deflore08/AuroraBar/releases/download/#New_Version#/AuroraBar_#New_Version#.rmskin
@@ -174,7 +174,7 @@
  DynamicVariables                 = 1
  OutputType                       = UTF8
  OutputFile                       = #Log_Restore_Hotkeys
- FinishAction                     = [!SetVariable Restore_Hotkeys_Completed "1"][!WriteKeyValue Variables Restore_Hotkeys_Completed "1" "#Service_Folder#\Service.inc"][!UpdateMeasure sensor.UPDATE_CONTROLLER][!Log "[UPDATE] Hotkeys list restored."]
+ FinishAction                     = [!SetVariable Restore_Hotkeys_Completed "1"][!WriteKeyValue Variables Restore_Hotkeys_Completed "1" "#Service_Folder#\Service.inc"][!UpdateMeasure sensor.UPDATE_CONTROLLER][!Log "[UPDATE] Hotkeys list restored."][!Refresh]
  Group                            = #updater#
 
 [m.Updater_Skin_Installer]

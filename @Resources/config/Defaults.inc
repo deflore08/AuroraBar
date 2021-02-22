@@ -1,6 +1,6 @@
 [Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.3b
+ Version                          = 2.1.4b
  Author                           = deflore08 (deflore08@gmail.com) | https://www.deviantart.com/deflore08
  License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
  Information                      = Default settings and state control variables. Do not change nothing here please, it's about yours and galaxy's safety.
