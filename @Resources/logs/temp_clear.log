@@ -1,0 +1,81 @@
+﻿Exception calling "Delete" with "0" argument(s): "Access to the path 
+'C:\Users\Mi\AppData\Local\Temp\hsperfdata_Mi\3192' is denied."
+At line:1 char:99
++ ... Local\Temp' -Include * -File -Recurse -Force | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : UnauthorizedAccessException
+ 
+Exception calling "Delete" with "0" argument(s): "Access to the path 
+'C:\Users\Mi\AppData\Local\Temp\is-QG6AP.tmp\CodeSetup-stable-622cb03f7e070a9670c94bae1a45d78d7181fbd4.tmp' is denied."
+At line:1 char:99
++ ... Local\Temp' -Include * -File -Recurse -Force | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : UnauthorizedAccessException
+ 
+Exception calling "Delete" with "0" argument(s): "Access to the path 
+'C:\Users\Mi\AppData\Local\Temp\jna-2492\jna7543211855007670983.dll' is denied."
+At line:1 char:99
++ ... Local\Temp' -Include * -File -Recurse -Force | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : UnauthorizedAccessException
+ 
+Exception calling "Delete" with "0" argument(s): "The process cannot access the file 
+'C:\Users\Mi\AppData\Local\Temp\vscode-update-user-x64\CodeSetup-stable-622cb03f7e070a9670c94bae1a45d78d7181fbd4.exe' 
+because it is being used by another process."
+At line:1 char:99
++ ... Local\Temp' -Include * -File -Recurse -Force | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : IOException
+ 
+Exception calling "Delete" with "0" argument(s): "The process cannot access the file 
+'C:\Users\Mi\AppData\Local\Temp\etilqs_ftBcAg391dudmBu' because it is being used by another process."
+At line:1 char:99
++ ... Local\Temp' -Include * -File -Recurse -Force | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : IOException
+ 
+Exception calling "Delete" with "0" argument(s): "The process cannot access the file 
+'C:\Users\Mi\AppData\Local\Temp\etilqs_Kctm4FHWjz44OPs' because it is being used by another process."
+At line:1 char:99
++ ... Local\Temp' -Include * -File -Recurse -Force | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : IOException
+ 
+Exception calling "Delete" with "0" argument(s): "The process cannot access the file 
+'C:\Users\Mi\AppData\Local\Temp\zhtml_2.0.4.3.8z' because it is being used by another process."
+At line:1 char:99
++ ... Local\Temp' -Include * -File -Recurse -Force | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : IOException
+ 
+Exception calling "Delete" with "0" argument(s): "The process cannot access the file 
+'C:\Users\Mi\AppData\Local\Temp\Zona2.1.0.3.jar' because it is being used by another process."
+At line:1 char:99
++ ... Local\Temp' -Include * -File -Recurse -Force | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : IOException
+ 
+Exception calling "Delete" with "0" argument(s): "The process cannot access the file 
+'C:\Users\Mi\AppData\Local\Temp\ztorcache_2.0.2.2.8z' because it is being used by another process."
+At line:1 char:99
++ ... Local\Temp' -Include * -File -Recurse -Force | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : IOException
+ 
+Exception calling "Delete" with "0" argument(s): "The process cannot access the file 
+'C:\Users\Mi\AppData\Local\Temp\zupnpms_2.0.0.9.8z' because it is being used by another process."
+At line:1 char:99
++ ... Local\Temp' -Include * -File -Recurse -Force | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : IOException
+ 

@@ -1,0 +1,24 @@
+﻿Exception calling "Delete" with "0" argument(s): "Access to the path 'C:\Users\Mi\AppData\Local\Temp\Discord 
+Crashes\CrashpadMetrics-active.pma' is denied."
+At line:1 char:92
++ ... ppData\Local\Temp' -Include * -File -Recurse | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : UnauthorizedAccessException
+ 
+Exception calling "Delete" with "0" argument(s): "The process cannot access the file 
+'C:\Users\Mi\AppData\Local\Temp\Discord Crashes\operation_log.txt' because it is being used by another process."
+At line:1 char:92
++ ... ppData\Local\Temp' -Include * -File -Recurse | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : IOException
+ 
+Exception calling "Delete" with "0" argument(s): "The process cannot access the file 
+'C:\Users\Mi\AppData\Local\Temp\~DF1D1311937E37FBAB.TMP' because it is being used by another process."
+At line:1 char:92
++ ... ppData\Local\Temp' -Include * -File -Recurse | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : IOException
+ 

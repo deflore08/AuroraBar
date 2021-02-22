@@ -1,0 +1,48 @@
+﻿Exception calling "Delete" with "0" argument(s): "Access to the path 'C:\Users\Mi\AppData\Local\Opera Software\Opera 
+GX Stable\Cache\data_0' is denied."
+At line:1 char:102
++ ... al\Opera Software' -Include * -File -Recurse | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : UnauthorizedAccessException
+ 
+Exception calling "Delete" with "0" argument(s): "Access to the path 'C:\Users\Mi\AppData\Local\Opera Software\Opera 
+GX Stable\Cache\data_1' is denied."
+At line:1 char:102
++ ... al\Opera Software' -Include * -File -Recurse | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : UnauthorizedAccessException
+ 
+Exception calling "Delete" with "0" argument(s): "Access to the path 'C:\Users\Mi\AppData\Local\Opera Software\Opera 
+GX Stable\Cache\data_2' is denied."
+At line:1 char:102
++ ... al\Opera Software' -Include * -File -Recurse | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : UnauthorizedAccessException
+ 
+Exception calling "Delete" with "0" argument(s): "Access to the path 'C:\Users\Mi\AppData\Local\Opera Software\Opera 
+GX Stable\Cache\data_3' is denied."
+At line:1 char:102
++ ... al\Opera Software' -Include * -File -Recurse | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : UnauthorizedAccessException
+ 
+Exception calling "Delete" with "0" argument(s): "Access to the path 'C:\Users\Mi\AppData\Local\Opera Software\Opera 
+GX Stable\Cache\data_5' is denied."
+At line:1 char:102
++ ... al\Opera Software' -Include * -File -Recurse | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : UnauthorizedAccessException
+ 
+Exception calling "Delete" with "0" argument(s): "Access to the path 'C:\Users\Mi\AppData\Local\Opera Software\Opera 
+GX Stable\Cache\index' is denied."
+At line:1 char:102
++ ... al\Opera Software' -Include * -File -Recurse | foreach { $_.Delete()}
++                                                              ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : UnauthorizedAccessException
+ 

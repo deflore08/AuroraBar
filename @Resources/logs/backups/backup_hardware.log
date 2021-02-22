@@ -1,0 +1,8 @@
+﻿New-Item : An item with the specified name C:\Users\Mi\AppData\Roaming\Rainmeter\Addons\AuroraBar\Backup already 
+exists.
+At line:1 char:1
++ New-Item -Path C:\Users\Mi\AppData\Roaming\Rainmeter\Addons\AuroraBar ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (C:\Users\Mi\App...uroraBar\Backup:String) [New-Item], IOException
+    + FullyQualifiedErrorId : DirectoryExist,Microsoft.PowerShell.Commands.NewItemCommand
+ 

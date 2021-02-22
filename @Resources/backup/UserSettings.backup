@@ -1,0 +1,232 @@
+[Metadata]
+ Name                             = AuroraBar
+ Version                          = 2.1.2b
+ Author                           = deflore08 (deflore08@gmail.com) | https://www.deviantart.com/deflore08
+ License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
+ Information                      = User-defined settings
+
+[Variables]
+
+; --- SETTINGS ---
+
+; --- UPDATES
+
+ Update_Rate                      = 1000
+ Divider_Quick                    =1
+ Divider_Main                     = 1
+ Divider_Graph                    = 1
+ Divider_Negative_Meter           = 0
+ Divider_Negative_Measure         = -1
+
+; --- DELAYS
+
+ Delay_x2                         = (#Update_Rate# * 2)
+
+; --- Dynamic Variables
+
+ DV_Main                          = 1
+
+; --- BEHAVIOUR
+
+ Window_X                         =0
+ Window_Y                         =540
+ Anchor_X                         =0
+ Anchor_Y                         =50
+
+ Monitor_Num                      = 
+ Monitor                          = @4
+ Skin_Alpha                       = 
+ Hide_On_Mouseover                = 
+ Clickthrough                     =
+
+ Skin_Zpos                        = 
+ Draggable                        = 
+ Snapedge                         = 
+ Keep_On_Screen                   = 
+
+; --- VOLUME & PLAYER
+
+; - #Player_Selection# sets player name depending on it's value from 1 to 8. (1 = AIMP; 2 = CAD; 3 = iTunes; 4 = MediaMonkey; 5 = Winamp; 6 = WMP; 7 = Spotify; 8 = WLM)
+
+ Player_Name                      =MEDIAMONKEY
+ Player_Selection                 =4
+
+; - Player Positions steps
+
+ Player_Position_Step             = 5
+ Position_Forward                 = +#Player_Position_Step#
+ Position_Backward                = -#Player_Position_Step#
+
+; - Volume control steps
+
+ Sys_Volume_Step                  =5
+ Sys_Volume_Down                  = -#Sys_Volume_Step#
+ Sys_Volume_Up                    = +#Sys_Volume_Step#
+
+ Player_Volume_Step               = 5
+ Player_Volume_Down               = -#Player_Volume_Step#
+ Player_Volume_Up                 = +#Player_Volume_Step#
+
+; --- NETWORK
+
+ Net_Max                          =200
+ 
+ Ping_Timeout                     =500
+ Ping_Max                         =100
+ Ping_Host                        = 8.8.8.8
+
+ Ping_App_1                       = ping -t #Ping_Host#
+
+; --- PROCESSORS UNITS LOADS AND TEMPERATURES MAX
+
+ CPU_Load_Max                     =85
+ GPU_Load_Max                     =70
+ CPU_Temp_Max                     =75
+ GPU_Temp_Max                     =65
+
+; --- DRIVES
+
+ Drive_One                        = C:
+ Drive_Two                        = D:
+
+ temp_folder                      = %localappdata%\Temp
+ cache_folder                     = %localappdata%\Opera Software
+
+; --- DEPRECATED
+
+ Drive_One_Min_Read               = 0
+ Drive_One_Max_Read               = 3221225472
+ Drive_One_Min_Write              = 0
+ Drive_One_Max_Write              = 1610612736
+
+ Drive_Two_Min_Read               = 0
+ Drive_Two_Max_Read               = 134217728
+ Drive_Two_Min_Write              = 0
+ Drive_Two_Max_Write              = 67108864
+
+; --- STATE CONTROL ---
+
+ Triangle_Top_Mechanic           = 0
+ Triangle_Bottom_Mechanic        = 1
+ Triangle_Left_Mechanic          = (1 - (1 - (1 - 1)))
+ Triangle_Right_Mechanic         = (1 - (1 - (1 - 1)))
+
+
+; --- HEIGHT variables
+
+; - #Height_State_One(1-6)# contains an unique value from 0 to 7. It needs to calculate HEIGHT mechanic (it's about TOP) in a formulas below
+
+ Height_State_One                = (2 - (2 - 2))
+ Height_State_Two                = 3
+ Height_State_Three              = (6 - (6 - 6))
+ Height_State_Four               = 7
+ Height_State_Five               = 5
+ Height_State_Six                = 4
+
+; - Attention: #Pad_Top# variable defines Y coordinate for eeeeeach element of Aurora.
+
+; - Default value is "110". If your taskbar is on top of screen - you may use 150 and 140 (if icons is minimized) values to keep Aurora below taskbar. 
+
+ Pad_Top                         = 110 
+
+; - #Pad_Bottom_N# defines a Y position for elements below BG. If it's hided, it will 112px. 
+
+ Pad_Bottom_VRAM_Top             = 0
+ Pad_Bottom_CPU_Top              = 0
+ Pad_Bottom_Throttling           = 0
+ Pad_Bottom_Power_Limit          = 0
+ Pad_Bottom_GPU_Top              = 0
+ Pad_Bottom_Disk_Read_Top        = 0
+ Pad_Bottom_Logs                 = 0
+
+; --- BLUETOOTH STATE
+
+ Bluetooth_State                 = 0
+ Bluetooth_Visible               =0
+
+; --- AUDIO DEVICES STATE
+
+ Audio_Devices_State             =0
+
+; --- VRAM INSTANCE STATE
+
+ VRAM_Instance_State             =0
+
+; --- EFFECTS STATES
+
+ Frosted_Glass_State             =0
+ Translucent_State               =1
+
+; --- TOOLTIPS
+
+ ToolTips_State                  =1
+
+; --- SOUNDS STATE
+
+ Sounds_State                    =0
+
+; --- SECTIONS STATES
+
+ CPU_Top_State                   = 0
+ GPU_Top_State                   = 0  
+ CPU_Info_State                  = (1 - (1 - 0)) 
+ GPU_Info_State                  = 0 
+ RAM_Top_State                   = 0 
+ VRAM_Top_State                  = 0 
+ Threads_State                   = (1 - (1 - 0)) 
+ Throttling_State                = 0 
+ Clock_Info_State                = 0 
+ Power_Limit_State               = 0 
+ Disk_Read_Top_State             = 0 
+ Disk_Write_Top_State            = 0 
+
+ Logs_Bottom_State               = (1 - (1 - (1 - 1)))
+ Logs_Top_State                  = 0
+
+ Disk_Left_Side_State            = 0
+ Calculator_State                = 1
+
+ App_Volume_Control_Static_State = 0
+ App_Volume_Control_Dyna_State   = 1
+
+ Pallete_State                   = 1
+ Clock_And_Date_State            = 0
+
+; --- PLAYER STATES
+
+ Player_1_Artist_Title_State     = 1
+ Player_1_Shuffle_State          = 0
+ Player_1_Repeat_State           = 1
+ Player_2_Artist_Title_State     = 0
+ Player_2_Shuffle_State          = 0
+ Player_2_Repeat_State           = 0
+
+; --- MENU variables, important
+
+; - #Settings_Menu# need to control menu buttons (crystal shapes) 
+
+; - #Aurora_BG_Behaviour_State# determines BG MouseOver\Leave behaviour
+
+ Settings_Menu                   = 0
+ Aurora_BG_Behaviour_State       = 0
+
+; - The next variables controls the menu bookmarks
+
+; - #Settings_Close# it's about X (close) button
+
+ Settings_Main                   = 1
+ Settings_Color                  = 1
+ Settings_Hardware               = 1
+ Settings_Behaviour              = 1
+ Settings_Close                  = 1
+
+; - "Temporary" variables that controls switcher between main texts and menu texts
+
+ Settings_Main_Temp              = 1
+ Settings_Color_Temp             = 1
+ Settings_Hardware_Temp          = 1
+ Settings_Behaviour_Temp         = 1
+
+; - #Settings_Temp_Control# controls [f.Temp_Vars_State] formula
+
+ Settings_Temp_Control           = 1
