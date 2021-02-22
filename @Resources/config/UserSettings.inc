@@ -45,7 +45,7 @@
 
 ; - Volume control steps
 
- Sys_Volume_Step                  =5
+ Sys_Volume_Step                  =33
  Sys_Volume_Down                  =-5
  Sys_Volume_Up                    =+5
 
