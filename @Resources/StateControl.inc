@@ -1,6 +1,6 @@
 [Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.4b
+ Version                          = 2.1.5b
  Author                           = deflore08 (deflore08@gmail.com) | https://www.deviantart.com/deflore08
  License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
  Information                      = Control state variables. If you refresh skin, they will make sure that you are guaranteed find Aurora in the latest condition.

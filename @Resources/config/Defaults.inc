@@ -1,6 +1,6 @@
 [Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.4b
+ Version                          = 2.1.5b
  Author                           = deflore08 (deflore08@gmail.com) | https://www.deviantart.com/deflore08
  License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
  Information                      = Default settings and state control variables. Do not change nothing here please, it's about yours and galaxy's safety.
@@ -13,233 +13,233 @@
 
 ; --- CONFIG
 
- Defaults                                 = config\Defaults.inc
- Config                                   = config\UserSettings.inc
- Hardware                                 = config\Hardware.inc
- Hotkeys                                  = config\Hotkeys.inc
+ Defaults                                       = config\Defaults.inc
+ Config                                         = config\UserSettings.inc
+ Hardware                                       = config\Hardware.inc
+ Hotkeys                                        = config\Hotkeys.inc
 
- Backup_Folder                            = #@#\backup
- Backup_Global_Folder                     = #ADDONSPATH#AuroraBar\Backup
- Restore_Folder                           = #@#\config
- Update_Folder                            = #ADDONSPATH#AuroraBar\Update\#New_Build#
- Service_Folder                           = #ADDONSPATH#AuroraBar\Service
+ Backup_Folder                                  = #@#\backup
+ Backup_Global_Folder                           = #ADDONSPATH#AuroraBar\Backup
+ Restore_Folder                                 = #@#\config
+ Update_Folder                                  = #ADDONSPATH#AuroraBar\Update\#New_Build#
+ Service_Folder                                 = #ADDONSPATH#AuroraBar\Service
 
- Existance_Addons                         =
- Existance_Backup                         =
- Existance_Update                         =
- Existance_Service                        = 1
+ Existance_Addons                               =
+ Existance_Backup                               =
+ Existance_Update                               =
+ Existance_Service                              = 1
 
 ; --- BACKUPS
 
- Backup_Config                            = #Backup_Folder#\UserSettings.backup
- Backup_Hardware                          = #Backup_Folder#\Hardware.backup
- Backup_Hotkeys                           = #Backup_Folder#\Hotkeys.backup
-
- Backup_Config_Global                     = #Backup_Global_Folder#\UserSettings.backup
- Backup_Hardware_Global                   = #Backup_Global_Folder#\Hardware.backup
- Backup_Hotkeys_Global                    = #Backup_Global_Folder#\Hotkeys.backup
-
-; --- LOGS
-
-; - Actions logs
-
- Log_App_Terminate                        = #@#\logs\applications\app_terminate.log
-
-; - Backups logs
-
- Log_Backup_Config                        = #@#\logs\backups\backup_config.log
- Log_Backup_Hardware                      = #@#\logs\backups\backup_hardware.log
- Log_Backup_Hotkeys                       = #@#\logs\backups\backup_hotkeys.log
-
- Log_Restore_Config                       = #@#\logs\backups\restore_config.log
- Log_Restore_Hardware                     = #@#\logs\backups\restore_hardware.log
- Log_Restore_Hotkeys                      = #@#\logs\backups\restore_hotkeys.log
-
-; - Cleaners logs
-
- Log_Cache_Clear                          = #@#\logs\cleaners\cache_clear.log
- Log_Temp_Clear                           = #@#\logs\cleaners\temp_clear.log
- 
- ; - Updater logs
-
- Log_Updater                              = #@#\logs\updater\updater.log
- Log_Installer                            = #@#\logs\updater\installer.log
- Log_Update_Completition                  = #@#\logs\updater\update_completition.log
-
-; - Sensors logs
-
- Log_CPU                                  = #@#\logs\sensors\cpu.log
- Log_GPU                                  = #@#\logs\sensors\gpu.log
- Log_RAM                                  = #@#\logs\sensors\ram.log
- Log_VRAM                                 = #@#\logs\sensors\vram.log
- Log_IO_Read                              = #@#\logs\sensors\io_read.log
- Log_IO_Write                             = #@#\logs\sensors\io_write.log
-
-; --- TOP UTILIZATIONS
-
- CPU_Top_App                              = 
- CPU_Top_App_V_1                          = [sensor.CPU_TOP_1:1]
- CPU_Top_App_V_2                          = [sensor.CPU_TOP_2:1]
- CPU_Top_App_V_3                          = [sensor.CPU_TOP_3:1]
- CPU_Top_App_V_4                          = [sensor.CPU_TOP_4:1]
- CPU_Top_App_V_5                          = [sensor.CPU_TOP_5:1]
- GPU_Top_App                              =
- GPU_Top_App_V_1                          = [sensor.GPU_TOP_1:1]
- GPU_Top_App_V_2                          = [sensor.GPU_TOP_2:1]
- GPU_Top_App_V_3                          = [sensor.GPU_TOP_3:1]
- GPU_Top_App_V_4                          = [sensor.GPU_TOP_4:1]
- GPU_Top_App_V_5                          = [sensor.GPU_TOP_5:1]
- RAM_Top_App                              = 
- RAM_Top_App_V_1                          = [sensor.RAM_TOP_1:1]
- RAM_Top_App_V_2                          = [sensor.RAM_TOP_2:1]
- RAM_Top_App_V_3                          = [sensor.RAM_TOP_3:1]
- VRAM_Top_App                             =
- VRAM_Top_App_V_1                         = [sensor.VRAM_TOP_1:1]
- VRAM_Top_App_V_2                         = [sensor.VRAM_TOP_2:1]
- VRAM_Top_App_V_3                         = [sensor.VRAM_TOP_3:1]
- IO_Read_Top_App                          =
- IO_Read_Top_App_V_1                      = [formula.TOP_IO_READ_SCALED_1]
- IO_Read_Top_App_V_2                      = [formula.TOP_IO_READ_SCALED_2]
- IO_Read_Top_App_V_3                      = [formula.TOP_IO_READ_SCALED_3]
- IO_Write_Top_App                         = 
- IO_Write_Top_App_V_1                     = [formula.TOP_IO_WRITE_SCALED_1]
- IO_Write_Top_App_V_2                     = [formula.TOP_IO_WRITE_SCALED_2]
- IO_Write_Top_App_V_3                     = [formula.TOP_IO_WRITE_SCALED_3]
- App_Volume_Process                       = 
-
-; --- HEALTH STATES
-
- CPU_Health_State                         = GOOD
- GPU_Health_State                         = GOOD
- RAM_Health_State                         = GOOD
- VRAM_Health_State                        = GOOD
- IO_Read_Health_State                     = GOOD
- IO_Write_Health_State                    = GOOD
-
-; - CPU HEALTH
-
- CPU_Load_Health                          =
- CPU_Temp_Health                          =
-
-; - GPU HEALTH
-
- GPU_Load_Health                          =
- GPU_Temp_Health                          =
-
-; --- SETTINGS ---
-
-; --- MAIN
-
-; - Effects
-
- Default_Frosted_Glass_State             = 0
- Default_Translucent_State               = 1
- Default_ToolTips_State                  = 1
- Default_Sounds_State                    = 1
-
-; - Updates
-
- Default_Update_Rate                      = 16
- Default_Cycles_2nd_Divider               = 3
- Default_Cycles_3rd_Divider               = 2
- Default_Divider_Negative_Meter           = 0
- Default_Divider_Negative_Measure         = -1
- Default_Delay_x2                         = (#Update_Rate# * 2)
- Default_Delay_x3                         = (#Update_Rate# * 3)
- Default_DV_Main                          = 1
+ Backup_Config                                  = #Backup_Folder#\UserSettings.backup
+ Backup_Hardware                                = #Backup_Folder#\Hardware.backup
+ Backup_Hotkeys                                 = #Backup_Folder#\Hotkeys.backup
+      
+ Backup_Config_Global                           = #Backup_Global_Folder#\UserSettings.backup
+ Backup_Hardware_Global                         = #Backup_Global_Folder#\Hardware.backup
+ Backup_Hotkeys_Global                          = #Backup_Global_Folder#\Hotkeys.backup
+      
+; --- LOGS      
+      
+; - Actions logs      
+      
+ Log_App_Terminate                              = #@#\logs\applications\app_terminate.log
+      
+; - Backups logs      
+      
+ Log_Backup_Config                              = #@#\logs\backups\backup_config.log
+ Log_Backup_Hardware                            = #@#\logs\backups\backup_hardware.log
+ Log_Backup_Hotkeys                             = #@#\logs\backups\backup_hotkeys.log
+      
+ Log_Restore_Config                             = #@#\logs\backups\restore_config.log
+ Log_Restore_Hardware                           = #@#\logs\backups\restore_hardware.log
+ Log_Restore_Hotkeys                            = #@#\logs\backups\restore_hotkeys.log
+      
+; - Cleaners logs      
+      
+ Log_Cache_Clear                                = #@#\logs\cleaners\cache_clear.log
+ Log_Temp_Clear                                 = #@#\logs\cleaners\temp_clear.log
+       
+ ; - Updater logs      
+      
+ Log_Updater                                    = #@#\logs\updater\updater.log
+ Log_Installer                                  = #@#\logs\updater\installer.log
+ Log_Update_Completition                        = #@#\logs\updater\update_completition.log
+      
+; - Sensors logs      
+      
+ Log_CPU                                        = #@#\logs\sensors\cpu.log
+ Log_GPU                                        = #@#\logs\sensors\gpu.log
+ Log_RAM                                        = #@#\logs\sensors\ram.log
+ Log_VRAM                                       = #@#\logs\sensors\vram.log
+ Log_IO_Read                                    = #@#\logs\sensors\io_read.log
+ Log_IO_Write                                   = #@#\logs\sensors\io_write.log
+      
+; --- TOP UTILIZATIONS      
+      
+ CPU_Top_App                                    = 
+ CPU_Top_App_V_1                                = [sensor.CPU_TOP_1:1]
+ CPU_Top_App_V_2                                = [sensor.CPU_TOP_2:1]
+ CPU_Top_App_V_3                                = [sensor.CPU_TOP_3:1]
+ CPU_Top_App_V_4                                = [sensor.CPU_TOP_4:1]
+ CPU_Top_App_V_5                                = [sensor.CPU_TOP_5:1]
+ GPU_Top_App                                    =
+ GPU_Top_App_V_1                                = [sensor.GPU_TOP_1:1]
+ GPU_Top_App_V_2                                = [sensor.GPU_TOP_2:1]
+ GPU_Top_App_V_3                                = [sensor.GPU_TOP_3:1]
+ GPU_Top_App_V_4                                = [sensor.GPU_TOP_4:1]
+ GPU_Top_App_V_5                                = [sensor.GPU_TOP_5:1]
+ RAM_Top_App                                    = 
+ RAM_Top_App_V_1                                = [sensor.RAM_TOP_1:1]
+ RAM_Top_App_V_2                                = [sensor.RAM_TOP_2:1]
+ RAM_Top_App_V_3                                = [sensor.RAM_TOP_3:1]
+ VRAM_Top_App                                   =
+ VRAM_Top_App_V_1                               = [sensor.VRAM_TOP_1:1]
+ VRAM_Top_App_V_2                               = [sensor.VRAM_TOP_2:1]
+ VRAM_Top_App_V_3                               = [sensor.VRAM_TOP_3:1]
+ IO_Read_Top_App                                =
+ IO_Read_Top_App_V_1                            = [formula.TOP_IO_READ_SCALED_1]
+ IO_Read_Top_App_V_2                            = [formula.TOP_IO_READ_SCALED_2]
+ IO_Read_Top_App_V_3                            = [formula.TOP_IO_READ_SCALED_3]
+ IO_Write_Top_App                               = 
+ IO_Write_Top_App_V_1                           = [formula.TOP_IO_WRITE_SCALED_1]
+ IO_Write_Top_App_V_2                           = [formula.TOP_IO_WRITE_SCALED_2]
+ IO_Write_Top_App_V_3                           = [formula.TOP_IO_WRITE_SCALED_3]
+ App_Volume_Process                             = 
+      
+; --- HEALTH STATES      
+      
+ CPU_Health_State                               = GOOD
+ GPU_Health_State                               = GOOD
+ RAM_Health_State                               = GOOD
+ VRAM_Health_State                              = GOOD
+ IO_Read_Health_State                           = GOOD
+ IO_Write_Health_State                          = GOOD
+      
+; - CPU HEALTH      
+      
+ CPU_Load_Health                                =
+ CPU_Temp_Health                                =
+      
+; - GPU HEALTH      
+      
+ GPU_Load_Health                                =
+ GPU_Temp_Health                                =
+      
+; --- SETTINGS ---      
+      
+; --- MAIN      
+      
+; - Effects      
+      
+ Default_Frosted_Glass_State                    = 0
+ Default_Translucent_State                      = 1
+ Default_ToolTips_State                         = 1
+ Default_Sounds_State                           = 1
+            
+; - Updates      
+      
+ Default_Update_Rate                            = 16
+ Default_Cycles_2nd_Divider                     = 3
+ Default_Cycles_3rd_Divider                     = 2
+ Default_Divider_Negative_Meter                 = 0
+ Default_Divider_Negative_Measure               = -1
+ Default_Delay_x2                               = (#Update_Rate# * 2)
+ Default_Delay_x3                               = (#Update_Rate# * 3)
+ Default_DV_Main                                = 1
 
 ; - Volume
 
- Default_Player_Name                      = AIMP
- Default_Player_Selection                 = 1
- Default_Player_State                     = 0
-
-; - Player Positions steps
-
- Default_Player_Position_Step             = 5
- Default_Position_Forward                 = +#Player_Position_Step#
- Default_Position_Backward                = -#Player_Position_Step#
-
-; - Volume control steps
-
- Default_Sys_Volume_Step                  = 5
- Default_Sys_Volume_Down                  = -#Sys_Volume_Step#
- Default_Sys_Volume_Up                    = +#Sys_Volume_Step#
-
- Default_Player_Volume_Step               = 5
- Default_Player_Volume_Down               = -#Player_Volume_Step#
- Default_Player_Volume_Up                 = +#Player_Volume_Step#
-
-; - Applications
-
-; App names to display
-
- Default_App_Volume_1S                    = aimp
- Default_App_Volume_2S                    = potplayer
- Default_App_Volume_3S                    = discord
- Default_App_Volume_4S                    = opera
-
-; Full app names to control
-
- Default_App_Volume_1                     = aimp.exe
- Default_App_Volume_2                     = potplayermini64.exe
- Default_App_Volume_3                     = discord.exe
- Default_App_Volume_4                     = opera.exe
-
-; --- HARDWARE ---
+ Default_Player_Name                            = AIMP
+ Default_Player_Selection                       = 1
+ Default_Player_State                           = 0
+      
+; - Player Positions steps      
+      
+ Default_Player_Position_Step                   = 5
+ Default_Position_Forward                       = +#Player_Position_Step#
+ Default_Position_Backward                      = -#Player_Position_Step#
+      
+; - Volume control steps      
+      
+ Default_Sys_Volume_Step                        = 5
+ Default_Sys_Volume_Down                        = -#Sys_Volume_Step#
+ Default_Sys_Volume_Up                          = +#Sys_Volume_Step#
+      
+ Default_Player_Volume_Step                     = 5
+ Default_Player_Volume_Down                     = -#Player_Volume_Step#
+ Default_Player_Volume_Up                       = +#Player_Volume_Step#
+      
+; - Applications      
+      
+; App names to display      
+      
+ Default_App_Volume_1S                          = aimp
+ Default_App_Volume_2S                          = potplayer
+ Default_App_Volume_3S                          = discord
+ Default_App_Volume_4S                          = opera
+      
+; Full app names to control      
+      
+ Default_App_Volume_1                           = aimp.exe
+ Default_App_Volume_2                           = potplayermini64.exe
+ Default_App_Volume_3                           = discord.exe
+ Default_App_Volume_4                           = opera.exe
+      
+; --- HARDWARE ---      
 
 ; - Network
 
- Default_Net_Max                          = 100
- Default_Ping_Max                         = 100
- Default_Ping_Timeout                     = 1000
- Default_Ping_Host                        = 8.8.8.8
- Default_Ping_App_1                       = ping -t #Ping_Host#
-
-; - Drives
-
- Default_Drive_One                        = C:
- Default_Drive_Two                        = D:
- Default_Temp_Folder                      = %localappdata%\Temp
- Default_Cache_Folder                     = %localappdata%\Packages\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\LocalCache
-
-; - Limits
-
- Default_CPU_Load_Max                     = 80
- Default_GPU_Load_Max                     = 70
- Default_CPU_Temp_Max                     = 75
- Default_GPU_Temp_Max                     = 65
+ Default_Net_Max                                = 100
+ Default_Ping_Max                               = 100
+ Default_Ping_Timeout                           = 1000
+ Default_Ping_Host                              = 8.8.8.8
+ Default_Ping_App_1                             = ping -t #Ping_Host#
+      
+; - Drives      
+      
+ Default_Drive_One                              = C:
+ Default_Drive_Two                              = D:
+ Default_Temp_Folder                            = %localappdata%\Temp
+ Default_Cache_Folder                           = %localappdata%\Packages\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\LocalCache
+      
+; - Limits      
+      
+ Default_CPU_Load_Max                           = 80
+ Default_GPU_Load_Max                           = 70
+ Default_CPU_Temp_Max                           = 75
+ Default_GPU_Temp_Max                           = 65
 
 ; - Other HW
 
- Default_Bluetooth_State                 = 1
- Default_Bluetooth_Visible               = 1
- Default_Audio_Devices_State             = 1
- Default_VRAM_Instance_State             = 0
-
-; --- BEHAVIOUR
-
- Default_Window_X                         = 0
- Default_Window_Y                         = 540
- Default_Anchor_X                         = 0
- Default_Anchor_Y                         = 50
-
- Default_Monitor_Num                      = 1
- Default_Monitor                          = @#Monitor_Num#
- Default_Skin_Alpha                       = 255
-
- Default_Skin_Zpos                        = 0
- Default_Last_Zpos                        = 
- Default_Draggable                        = 1
- Default_Snapedge                         = 1
- Default_Keep_On_Screen                   = 1
+ Default_Bluetooth_State                        = 1
+ Default_Bluetooth_Visible                      = 1
+ Default_Audio_Devices_State                    = 1
+ Default_VRAM_Instance_State                    = 0
+      
+; --- BEHAVIOUR      
+      
+ Default_Window_X                               = 0
+ Default_Window_Y                               = 540
+ Default_Anchor_X                               = 0
+ Default_Anchor_Y                               = 50
+      
+ Default_Monitor_Num                            = 1
+ Default_Monitor                                = @#Monitor_Num#
+ Default_Skin_Alpha                             = 255
+      
+ Default_Skin_Zpos                              = 0
+ Default_Last_Zpos                              = 
+ Default_Draggable                              = 1
+ Default_Snapedge                               = 1
+ Default_Keep_On_Screen                         = 1
 
 ; --- CPU & GPU HISTOGRAMS
 
- Default_CPU_Histogram_Width              = 300
- Default_CPU_Histogram_X                  = 512
- Default_GPU_Histogram_Width              = 300
- Default_GPU_Histogram_X                  = 1100
+ Default_CPU_Histogram_Width                    = 300
+ Default_CPU_Histogram_X                        = 512
+ Default_GPU_Histogram_Width                    = 300
+ Default_GPU_Histogram_X                        = 1100
 
 ; --- STATE CONTROL ---
 
@@ -247,132 +247,198 @@
 
 ; - Default value is "110". If your taskbar is on top of screen - you may use 150 and 140 (if icons is minimized) values to keep Aurora below taskbar. 
 
- Default_Pad_Top                         = 0
- Default_Pad_X_Wings_Left                = 
- Default_Pad_X_Wings_Right               =
-
+ Default_Pad_Top                                = 0
+ Default_Pad_X_Wings_Left                       = 
+ Default_Pad_X_Wings_Right                      =
+       
 ; --- HEIGHT variables
 
 ; - #Height_State_One(1-6)# contains an unique value from 0 to 7. It needs to calculate HEIGHT mechanic (it's about TOP) in a formulas below
 
- Default_Height_State_One                = 0
- Default_Height_State_Two                = 0
- Default_Height_State_Three              = 0
- Default_Height_State_Four               = 0
- Default_Height_State_Five               = 0
- Default_Height_State_Six                = 0
-
+ Default_Height_State_One                       = 0
+ Default_Height_State_Two                       = 0
+ Default_Height_State_Three                     = 0
+ Default_Height_State_Four                      = 0
+ Default_Height_State_Five                      = 0
+ Default_Height_State_Six                       = 0
+       
 ; - #Pad_Bottom_INSTANCE# defines a Y position for elements below BG. If it's hided, it will 112px. 
-
- Default_Pad_Bottom_VRAM_Top             = 112
- Default_Pad_Bottom_CPU_Top              = 112
- Default_Pad_Bottom_Throttling           = 112
- Default_Pad_Bottom_Power_Limit          = 112
- Default_Pad_Bottom_GPU_Top              = 112
- Default_Pad_Bottom_DIsk_Read_Top        = 112
- Default_Pad_Bottom_Logs                 = 112
-
+       
+ Default_Pad_Bottom_VRAM_Top                    = 112
+ Default_Pad_Bottom_CPU_Top                     = 112
+ Default_Pad_Bottom_Throttling                  = 112
+ Default_Pad_Bottom_Power_Limit                 = 112
+ Default_Pad_Bottom_GPU_Top                     = 112
+ Default_Pad_Bottom_DIsk_Read_Top               = 112
+ Default_Pad_Bottom_Logs                        = 112
+      
 ; --- TRIANGLE mechanics determines behaviour of 4 triangles from all sides
-
- Default_Triangle_Top_Mechanic           = 1
- Default_Triangle_Bottom_Mechanic        = 0
- Default_Triangle_Left_Mechanic          = 0
- Default_Triangle_Right_Mechanic         = 0
-
-; --- SECTIONS STATES
-
- Default_CPU_Top_State                   = 1
- Default_GPU_Top_State                   = 1  
- Default_CPU_Info_State                  = 1 
- Default_GPU_Info_State                  = 1 
- Default_RAM_Top_State                   = 1 
- Default_VRAM_Top_State                  = 1 
- Default_Threads_State                   = 1 
- Default_Throttling_State                = 1 
- Default_Clock_Info_State                = 1 
- Default_Power_Limit_State               = 1 
- Default_Disk_Read_Top_State             = 1 
- Default_Disk_Write_Top_State            = 1 
- Default_Debug_State                     = 1
-
- Default_Logs_Bottom_State               = 1
- Default_Logs_Top_State                  = 0
-
- Default_Disk_Left_Side_State            = 0
- Default_Calculator_State                = 1
-
- Default_App_Volume_Control_Static_State = 0
- Default_App_Volume_Control_Dyna_State   = 1
-
- Default_Pallete_State                   = 1
- Default_Clock_And_Date_State            = 0
-
-; --- PLAYER STATES
-
- Default_Player_1_Artist_Title_State     = 1
- Default_Player_1_Shuffle_State          = 0
- Default_Player_1_Repeat_State           = 1
- Default_Player_2_Artist_Title_State     = 0
- Default_Player_2_Shuffle_State          = 0
- Default_Player_2_Repeat_State           = 0
-
-; --- MENU variables, important
-
-; - #Settings_Menu# need to control menu buttons (crystal shapes) 
-
-; - #Aurora_BG_Behaviour_State# determines BG MouseOver\Leave behaviour
-
- Default_Settings_Menu                   = 0
- Default_Aurora_BG_Behaviour_State       = 0
-
+      
+ Default_Triangle_Top_Mechanic                  = 1
+ Default_Triangle_Bottom_Mechanic               = 0
+ Default_Triangle_Left_Mechanic                 = 0
+ Default_Triangle_Right_Mechanic                = 0
+       
+; --- SECTIONS STATES       
+       
+ Default_CPU_Top_State                          = 1
+ Default_GPU_Top_State                          = 1  
+ Default_CPU_Info_State                         = 1 
+ Default_GPU_Info_State                         = 1 
+ Default_RAM_Top_State                          = 1 
+ Default_VRAM_Top_State                         = 1 
+ Default_Threads_State                          = 1 
+ Default_Throttling_State                       = 1 
+ Default_Clock_Info_State                       = 1 
+ Default_Power_Limit_State                      = 1 
+ Default_Disk_Read_Top_State                    = 1 
+ Default_Disk_Write_Top_State                   = 1 
+ Default_Debug_State                            = 1
+       
+ Default_Logs_Bottom_State                      = 1
+ Default_Logs_Top_State                         = 0
+       
+ Default_Disk_Left_Side_State                   = 0
+ Default_Calculator_State                       = 1
+       
+ Default_App_Volume_Control_Static_State        = 0
+ Default_App_Volume_Control_Dyna_State          = 1
+       
+ Default_Pallete_State                          = 1
+ Default_Clock_And_Date_State                   = 0
+       
+; --- PLAYER STATES       
+       
+ Default_Player_1_Artist_Title_State            = 1
+ Default_Player_1_Shuffle_State                 = 0
+ Default_Player_1_Repeat_State                  = 1
+ Default_Player_2_Artist_Title_State            = 0
+ Default_Player_2_Shuffle_State                 = 0
+ Default_Player_2_Repeat_State                  = 0
+       
+; --- MENU variables, important       
+       
+; - #Settings_Menu# need to control menu        buttons (crystal shapes) 
+       
+; - #Aurora_BG_Behaviour_State# determine       s BG MouseOver\Leave behaviour
+       
+ Default_Settings_Menu                          = 0
+ Default_Aurora_BG_Behaviour_State              = 0
+      
 ; - The next variables controls the menu bookmarks
-
+      
 ; - #Settings_Close# it's about X (close) button
-
- Default_Settings_Main                   = 1
- Default_Settings_Color                  = 1
- Default_Settings_Hardware               = 1
- Default_Settings_Behaviour              = 1
- Default_Settings_Close                  = 1
-
+      
+ Default_Settings_Main                          = 1
+ Default_Settings_Color                         = 1
+ Default_Settings_Hardware                      = 1
+ Default_Settings_Behaviour                     = 1
+ Default_Settings_Close                         = 1
+       
 ; - "Temporary" variables that controls switcher between main texts and menu texts
-
- Default_Settings_Main_Temp              = 1
- Default_Settings_Color_Temp             = 1
- Default_Settings_Hardware_Temp          = 1
- Default_Settings_Behaviour_Temp         = 1
-
+       
+ Default_Settings_Main_Temp                     = 1
+ Default_Settings_Color_Temp                    = 1
+ Default_Settings_Hardware_Temp                 = 1
+ Default_Settings_Behaviour_Temp                = 1
+       
 ; - #Settings_Temp_Control# controls [f.Temp_Vars_State] formula
-
- Default_Settings_Temp_Control           = 1
+       
+ Default_Settings_Temp_Control                  = 1
 
 ; --- DEPRECATED
 
-; Default_Drive_One_Min_Read               = 0
-; Default_Drive_One_Max_Read               = 3221225472
-; Default_Drive_One_Min_Write              = 0
-; Default_Drive_One_Max_Write              = 1610612736
+; Default_Drive_One_Min_Read                     = 0
+; Default_Drive_One_Max_Read                     = 3221225472
+; Default_Drive_One_Min_Write                    = 0
+; Default_Drive_One_Max_Write                    = 1610612736
+      
+; Default_Drive_Two_Min_Read                     = 0
+; Default_Drive_Two_Max_Read                     = 134217728
+; Default_Drive_Two_Min_Write                    = 0
+; Default_Drive_Two_Max_Write                    = 67108864
+      
+; --- COLORS ---
 
-; Default_Drive_Two_Min_Read               = 0
-; Default_Drive_Two_Max_Read               = 134217728
-; Default_Drive_Two_Min_Write              = 0
-; Default_Drive_Two_Max_Write              = 67108864
+ Default_R_Color                                = 
+ Default_G_Color                                = 
+ Default_B_Color                                = 
+ Default_A_Color                                = 
+       
+ Default_RGB_Color                              = 124, 12 , 239
+ Default_RGB_Font_Color                         = 255, 255, 255
+ Default_RGB_Font_Warning_Color                 = 
+ Default_Global_Color                           = #RGB_Color#, #Global_Alpha#
+ Default_Bar_Color                              = #Global_Color#
+ Default_Bar_BG_Color                           = #RGB_Color#, #Bar_BG_Alpha#
+      
+ Default_BG_Color                               = 0, 0, 0, 160
+      
+ Default_Font_Color                             = 0, 240 , 215, 255
+ Default_Font_Value_Color                       = 0, 240, 117, 255
+ Default_Font_Warning_Color                     = 240, 24 , 222, 255 
+      
+ Default_Global_Alpha                           = 220
+ Default_Font_Alpha                             = 255
+ Default_Pallete_Alpha                          = 140
+ Default_Bar_BG_Alpha                           = 50
 
-; --- SHELL
+; --- LAST COLORS
 
- Net_Center                       = Shell:::{7007ACC7-3202-11D1-AAD2-00805FC1270E}
- Time_And_Date                    = Shell:::{E2E7934B-DCE5-43C4-9576-7FE4F75E7480}
- Device_Manager                   = Shell:::{74246bfc-4c96-11d0-abef-0020af6b0b7a}
- Admin_Tools                      = Shell:::{D20EA4E1-3957-11d2-A40B-0C5020524153}
- Firewall                         = Shell:::{4026492F-2F69-46B8-B9BF-5654FC07E423}
- Run                              = Shell:::{2559a1f3-21d7-11d4-bdaf-00c04f60b9f0}
- Sound                            = Shell:::{F2DDFC82-8F12-4CDD-B7DC-D4FE1425AA4D}
- Computer                         = Shell:::{20D04FE0-3AEA-1069-A2D8-08002B30309D}
- Control_Panel                    = Shell:::{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}
- Desktop                          = Shell:::{3080F90D-D7AD-11D9-BD98-0000947B0257}
- System                           = Shell:::{BB06C0E4-D293-4f75-8A90-CB05B6477EEE}
- Power_Options                    = Shell:::{025A5937-A6BE-4686-A844-36FE4BEC8B6D}
- 
+; - These vars force Aurora to remember current scheme
+
+; - It needs for returning to your current scheme when mouse left out of a color buttons
+
+ Default_Last_Global_Color                      = 124, 12 , 239 
+ Default_Last_Bar_Color                         = 
+ Default_Last_BG_Color                          = 124, 12 , 239
+ Default_Last_RGB_Color                         = 
+ Default_Last_RGB_Font_Color                    = 0, 240 , 215 
+ Default_Last_Font_Color                        = 0, 240 , 215 
+ Default_Last_Value_Color                       = 0, 240, 117, 255 
+ Default_Last_Warning_Color                     = 240, 24 , 222
+
+; --- MAIN FONTS
+
+ Default_FontColor                              = #Font_Color#
+ Default_Font_Size                              = 10
+ Default_Font_Size_Small                        = 7
+ Default_Faded_Font_Size_Small                  = 7
+ Default_Font                                   = AGENCY FB
+ Default_Bold_Font                              = AGENCY FB
+ Default_String_Style                           = Normal
+ Default_T_String_Style                         = Normal
+
+; --- TIME FONTS
+
+ Default_Time_Font_Main                         = BRETTON
+ Default_Time_Font_Size_Day                     = 15
+ Default_Time_Font_Size_Cday                    = 15
+ Default_Time_Font_Color_Main                   = #Font_Color#
+ Default_Time_Font_Color_Hours                  = #Font_Color#
+ Default_Time_Font_Color_Mins                   = #Font_Color#
+ Default_Time_Font_Size_Main                    = 20
+ Default_Time_Font_Size_Hours                   = 40
+ Default_Time_Font_Size_Mins                    = 24
+ Default_Time_Font_Size_Secs                    = 14
+ Default_Time_Font_Size_Date                    = 15
+ Default_Time_Font_Size_Year                    = 15
+
+; --- SHELL     
+     
+ Net_Center                                     = Shell:::{7007ACC7-3202-11D1-AAD2-00805FC1270E}
+ Time_And_Date                                  = Shell:::{E2E7934B-DCE5-43C4-9576-7FE4F75E7480}
+ Device_Manager                                 = Shell:::{74246bfc-4c96-11d0-abef-0020af6b0b7a}
+ Admin_Tools                                    = Shell:::{D20EA4E1-3957-11d2-A40B-0C5020524153}
+ Firewall                                       = Shell:::{4026492F-2F69-46B8-B9BF-5654FC07E423}
+ Run                                            = Shell:::{2559a1f3-21d7-11d4-bdaf-00c04f60b9f0}
+ Sound                                          = Shell:::{F2DDFC82-8F12-4CDD-B7DC-D4FE1425AA4D}
+ Computer                                       = Shell:::{20D04FE0-3AEA-1069-A2D8-08002B30309D}
+ Control_Panel                                  = Shell:::{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}
+ Desktop                                        = Shell:::{3080F90D-D7AD-11D9-BD98-0000947B0257}
+ System                                         = Shell:::{BB06C0E4-D293-4f75-8A90-CB05B6477EEE}
+ Power_Options                                  = Shell:::{025A5937-A6BE-4686-A844-36FE4BEC8B6D}
+       
 ; --- SET DEFAULTS ---
 
 ; --- SETTINGS ---
@@ -430,10 +496,10 @@
 
 ; Full app names to control
 
- SET_DEFAULT_App_Volume_1                      = [!SetVariable App_Volume_1 "#Default_App_Volume_1#"][!WriteKeyValue Variables App_Volume_1 "#Default_App_Volume_1#" "#@#\#Config#"]
- SET_DEFAULT_App_Volume_2                      = [!SetVariable App_Volume_2 "#Default_App_Volume_2#"][!WriteKeyValue Variables App_Volume_2 "#Default_App_Volume_2#" "#@#\#Config#"]
- SET_DEFAULT_App_Volume_3                      = [!SetVariable App_Volume_3 "#Default_App_Volume_3#"][!WriteKeyValue Variables App_Volume_3 "#Default_App_Volume_3#" "#@#\#Config#"]
- SET_DEFAULT_App_Volume_4                      = [!SetVariable App_Volume_4 "#Default_App_Volume_4#"][!WriteKeyValue Variables App_Volume_4 "#Default_App_Volume_4#" "#@#\#Config#"]
+ SET_DEFAULT_App_Volume_1                       = [!SetVariable App_Volume_1 "#Default_App_Volume_1#"][!WriteKeyValue Variables App_Volume_1 "#Default_App_Volume_1#" "#@#\#Config#"]
+ SET_DEFAULT_App_Volume_2                       = [!SetVariable App_Volume_2 "#Default_App_Volume_2#"][!WriteKeyValue Variables App_Volume_2 "#Default_App_Volume_2#" "#@#\#Config#"]
+ SET_DEFAULT_App_Volume_3                       = [!SetVariable App_Volume_3 "#Default_App_Volume_3#"][!WriteKeyValue Variables App_Volume_3 "#Default_App_Volume_3#" "#@#\#Config#"]
+ SET_DEFAULT_App_Volume_4                       = [!SetVariable App_Volume_4 "#Default_App_Volume_4#"][!WriteKeyValue Variables App_Volume_4 "#Default_App_Volume_4#" "#@#\#Config#"]
 
 ; --- HARDWARE | :17
 
@@ -575,4 +641,64 @@
  SET_DEFAULT_Settings_Behaviour_Temp            = [!SetVariable Settings_Behaviour_Temp "#Default_Settings_Behaviour_Temp#"][!WriteKeyValue Variables Settings_Behaviour_Temp "#Default_Settings_Behaviour_Temp#" "#@#\#Config#"]
  SET_DEFAULT_Settings_Temp_Control              = [!SetVariable Settings_Temp_Control "#Default_Settings_Temp_Control#"][!WriteKeyValue Variables Settings_Temp_Control "#Default_Settings_Temp_Control#" "#@#\#Config#"]
 
- SET_DEFAULT                                    = #SET_DEFAULT_Frosted_Glass_State#   #SET_DEFAULT_Translucent_State#   #SET_DEFAULT_ToolTips_State#   #SET_DEFAULT_Sounds_State#   #SET_DEFAULT_Update_Rate#   #SET_DEFAULT_Cycles_2nd_Divider#   #SET_DEFAULT_Cycles_3rd_Divider#   #SET_DEFAULT_Default_Divider_Negative_Meter#   #SET_DEFAULT_Default_Divider_Negative_Measure#   #SET_DEFAULT_Default_Delay_x2#   #SET_DEFAULT_Default_Delay_x3#   #SET_DEFAULT_Default_DV_Main#   #SET_DEFAULT_Player_Name#   #SET_DEFAULT_Player_Selection#   #SET_DEFAULT_Player_State#   #SET_DEFAULT_Player_Position_Step#   #SET_DEFAULT_Position_Forward#   #SET_DEFAULT_Position_Backward#   #SET_DEFAULT_Sys_Volume_Step#   #SET_DEFAULT_Sys_Volume_Down#   #SET_DEFAULT_Sys_Volume_Up#   #SET_DEFAULT_Player_Volume_Step#   #SET_DEFAULT_Player_Volume_Down#   #SET_DEFAULT_Player_Volume_Up#   #SET_DEFAULT_App_Volume_1S#   #SET_DEFAULT_App_Volume_2S#   #SET_DEFAULT_App_Volume_3S#   #SET_DEFAULT_App_Volume_4S#   #SET_DEFAULT_App_Volume_1#   #SET_DEFAULT_App_Volume_2#   #SET_DEFAULT_App_Volume_3#   #SET_DEFAULT_App_Volume_4#   #SET_DEFAULT_Net_Max#   #SET_DEFAULT_Ping_Max#   #SET_DEFAULT_Ping_Timeout#   #SET_DEFAULT_Ping_Host#   #SET_DEFAULT_Ping_App_1#   #SET_DEFAULT_Drive_One#   #SET_DEFAULT_Drive_Two#   #SET_DEFAULT_Temp_Folder#   #SET_DEFAULT_Cache_Folder#   #SET_DEFAULT_CPU_Load_Max#   #SET_DEFAULT_GPU_Load_Max#   #SET_DEFAULT_CPU_Temp_Max#   #SET_DEFAULT_GPU_Temp_Max#   #SET_DEFAULT_Bluetooth_State#   #SET_DEFAULT_Bluetooth_Visible#   #SET_DEFAULT_Audio_Devices_State#   #SET_DEFAULT_VRAM_Instance_State#   #SET_DEFAULT_Window_X#   #SET_DEFAULT_Window_Y#   #SET_DEFAULT_Anchor_X#   #SET_DEFAULT_Anchor_Y#   #SET_DEFAULT_Monitor_Num#   #SET_DEFAULT_Monitor#   #SET_DEFAULT_Skin_Alpha#   #SET_DEFAULT_Skin_Zpos#   #SET_DEFAULT_Last_Zpos#   #SET_DEFAULT_Draggable#   #SET_DEFAULT_Snapedge#   #SET_DEFAULT_Keep_On_Screen#   #SET_DEFAULT_CPU_Histogram_Width#   #SET_DEFAULT_CPU_Histogram_X#   #SET_DEFAULT_GPU_Histogram_Width#   #SET_DEFAULT_GPU_Histogram_X#   #SET_DEFAULT_Pad_Top#   #SET_DEFAULT_Pad_X_Wings_Left#   #SET_DEFAULT_Pad_X_Wings_Right#   #SET_DEFAULT_Height_State_One#   #SET_DEFAULT_Height_State_Two#   #SET_DEFAULT_Height_State_Three#   #SET_DEFAULT_Height_State_Four#   #SET_DEFAULT_Height_State_Five#   #SET_DEFAULT_Height_State_Six#   #SET_DEFAULT_Pad_Bottom_VRAM_Top#   #SET_DEFAULT_Pad_Bottom_CPU_Top#   #SET_DEFAULT_Pad_Bottom_Throttling#   #SET_DEFAULT_Pad_Bottom_Power_Limit#   #SET_DEFAULT_Pad_Bottom_GPU_Top#   #SET_DEFAULT_Pad_Bottom_DIsk_Read_Top#   #SET_DEFAULT_Pad_Bottom_Logs#   #SET_DEFAULT_Triangle_Top_Mechanic#   #SET_DEFAULT_Triangle_Bottom_Mechanic#   #SET_DEFAULT_Triangle_Left_Mechanic#   #SET_DEFAULT_Triangle_Right_Mechanic#   #SET_DEFAULT_CPU_Top_State#   #SET_DEFAULT_GPU_Top_State#   #SET_DEFAULT_CPU_Info_State#   #SET_DEFAULT_GPU_Info_State#   #SET_DEFAULT_RAM_Top_State#   #SET_DEFAULT_VRAM_Top_State#   #SET_DEFAULT_Threads_State#   #SET_DEFAULT_Throttling_State#   #SET_DEFAULT_Clock_Info_State#   #SET_DEFAULT_Power_Limit_State#   #SET_DEFAULT_Disk_Read_Top_State#   #SET_DEFAULT_Disk_Write_Top_State#   #SET_DEFAULT_Debug_State#   #SET_DEFAULT_Logs_Bottom_State#   #SET_DEFAULT_Logs_Top_State#   #SET_DEFAULT_Disk_Left_Side_State#   #SET_DEFAULT_Calculator_State#   #SET_DEFAULT_App_Volume_Control_Static_State#   #SET_DEFAULT_App_Volume_Control_Dyna_State#   #SET_DEFAULT_Pallete_State#   #SET_DEFAULT_Clock_And_Date_State#   #SET_DEFAULT_Player_1_Artist_Title_State#   #SET_DEFAULT_Player_1_Shuffle_State#   #SET_DEFAULT_Player_1_Repeat_State#   #SET_DEFAULT_Player_2_Artist_Title_State#   #SET_DEFAULT_Player_2_Shuffle_State#   #SET_DEFAULT_Player_2_Repeat_State#   #SET_DEFAULT_Settings_Menu#   #SET_DEFAULT_Aurora_BG_Behaviour_State#   #SET_DEFAULT_Settings_Main#   #SET_DEFAULT_Settings_Color#   #SET_DEFAULT_Settings_Hardware#   #SET_DEFAULT_Settings_Behaviour#   #SET_DEFAULT_Settings_Close#   #SET_DEFAULT_Settings_Main_Temp#   #SET_DEFAULT_Settings_Color_Temp#   #SET_DEFAULT_Settings_Hardware_Temp#   #SET_DEFAULT_Settings_Behaviour_Temp#   #SET_DEFAULT_Settings_Temp_Control# [!Delay 2000][!Refresh]
+; --- COLORS
+
+ SET_DEFAULT_R_Color                            = [!SetVariable R_Color "#Default_R_Color#"][!WriteKeyValue Variables R_Color "#Default_R_Color#" "#@#\#Config#"]
+ SET_DEFAULT_G_Color                            = [!SetVariable G_Color "#Default_G_Color#"][!WriteKeyValue Variables G_Color "#Default_G_Color#" "#@#\#Config#"]
+ SET_DEFAULT_B_Color                            = [!SetVariable B_Color "#Default_B_Color#"][!WriteKeyValue Variables B_Color "#Default_B_Color#" "#@#\#Config#"]
+ SET_DEFAULT_A_Color                            = [!SetVariable A_Color "#Default_A_Color#"][!WriteKeyValue Variables A_Color "#Default_A_Color#" "#@#\#Config#"]
+
+ SET_DEFAULT_RGB_Color                          = [!SetVariable RGB_Color "#Default_RGB_Color#"][!WriteKeyValue Variables RGB_Color "#Default_RGB_Color#" "#@#\#Config#"]
+ SET_DEFAULT_RGB_Font_Color                     = [!SetVariable RGB_Font_Color "#Default_RGB_Font_Color#"][!WriteKeyValue Variables RGB_Font_Color "#Default_RGB_Font_Color#" "#@#\#Config#"]
+ SET_DEFAULT_RGB_Font_Warning_Color             = [!SetVariable RGB_Font_Warning_Color "#Default_RGB_Font_Warning_Color#"][!WriteKeyValue Variables RGB_Font_Warning_Color "#Default_RGB_Font_Warning_Color#" "#@#\#Config#"]
+ SET_DEFAULT_Global_Color                       = [!SetVariable Global_Color "#Default_Global_Color#"][!WriteKeyValue Variables Global_Color "#Default_Global_Color#" "#@#\#Config#"]
+ SET_DEFAULT_Bar_Color                          = [!SetVariable Bar_Color "#Default_Bar_Color#"][!WriteKeyValue Variables Bar_Color "#Default_Bar_Color#" "#@#\#Config#"]
+ SET_DEFAULT_Bar_BG_Color                       = [!SetVariable Bar_BG_Color "#Default_Bar_BG_Color#"][!WriteKeyValue Variables Bar_BG_Color "#Default_Bar_BG_Color#" "#@#\#Config#"]
+ 
+ SET_DEFAULT_BG_Color                           = [!SetVariable BG_Color "#Default_BG_Color#"][!WriteKeyValue Variables BG_Color "#Default_BG_Color#" "#@#\#Config#"]
+
+ SET_DEFAULT_Font_Color                         = [!SetVariable Font_Color "#Default_Font_Color#"][!WriteKeyValue Variables Font_Color "#Default_Font_Color#" "#@#\#Config#"]
+ SET_DEFAULT_Font_Value_Color                   = [!SetVariable Font_Value_Color "#Default_Font_Value_Color#"][!WriteKeyValue Variables Font_Value_Color "#Default_Font_Value_Color#" "#@#\#Config#"]
+ SET_DEFAULT_Font_Warning_Color                 = [!SetVariable Font_Warning_Color "#Default_Font_Warning_Color#"][!WriteKeyValue Variables Font_Warning_Color "#Default_Font_Warning_Color#" "#@#\#Config#"]
+
+ SET_DEFAULT_Global_Alpha                       = [!SetVariable Global_Alpha "#Default_Global_Alpha#"][!WriteKeyValue Variables Global_Alpha "#Default_Global_Alpha#" "#@#\#Config#"]
+ SET_DEFAULT_Font_Alpha                         = [!SetVariable Font_Alpha "#Default_Font_Alpha#"][!WriteKeyValue Variables Font_Alpha "#Default_Font_Alpha#" "#@#\#Config#"]
+ SET_DEFAULT_Pallete_Alpha                      = [!SetVariable Pallete_Alpha "#Default_Pallete_Alpha#"][!WriteKeyValue Variables Pallete_Alpha "#Default_Pallete_Alpha#" "#@#\#Config#"]
+ SET_DEFAULT_Bar_BG_Alpha                       = [!SetVariable Bar_BG_Alpha "#Default_Bar_BG_Alpha#"][!WriteKeyValue Variables Bar_BG_Alpha "#Default_Bar_BG_Alpha#" "#@#\#Config#"]
+
+ SET_DEFAULT_Last_Global_Color                  = [!SetVariable Last_Global_Color "#Default_Last_Global_Color#"][!WriteKeyValue Variables Last_Global_Color "#Default_Last_Global_Color#" "#@#\#Config#"]
+ SET_DEFAULT_Last_Bar_Color                     = [!SetVariable Last_Bar_Color "#Default_Last_Bar_Color#"][!WriteKeyValue Variables Last_Bar_Color "#Default_Last_Bar_Color#" "#@#\#Config#"]
+ SET_DEFAULT_Last_BG_Color                      = [!SetVariable Last_BG_Color "#Default_Last_BG_Color#"][!WriteKeyValue Variables Last_BG_Color "#Default_Last_BG_Color#" "#@#\#Config#"]
+ SET_DEFAULT_Last_RGB_Color                     = [!SetVariable Last_RGB_Color "#Default_Last_RGB_Color#"][!WriteKeyValue Variables Last_RGB_Color "#Default_Last_RGB_Color#" "#@#\#Config#"]
+ SET_DEFAULT_Last_RGB_Font_Color                = [!SetVariable Last_RGB_Font_Color "#Default_Last_RGB_Font_Color#"][!WriteKeyValue Variables Last_RGB_Font_Color "#Default_Last_RGB_Font_Color#" "#@#\#Config#"]
+ SET_DEFAULT_Last_Font_Color                    = [!SetVariable Last_Font_Color "#Default_Last_Font_Color#"][!WriteKeyValue Variables Last_Font_Color "#Default_Last_Font_Color#" "#@#\#Config#"]
+ SET_DEFAULT_Last_Value_Color                   = [!SetVariable Last_Value_Color "#Default_Last_Value_Color#"][!WriteKeyValue Variables Last_Value_Color "#Default_Last_Value_Color#" "#@#\#Config#"]
+ SET_DEFAULT_Last_Warning_Color                 = [!SetVariable Last_Warning_Color "#Default_Last_Warning_Color#"][!WriteKeyValue Variables Last_Warning_Color "#Default_Last_Warning_Color#" "#@#\#Config#"]
+
+; --- MAIN FONTS
+
+ SET_DEFAULT_FontColor                          = [!SetVariable FontColor "#Default_FontColor#"][!WriteKeyValue Variables Last_FontColor "#Default_FontColor#" "#@#\#Config#"]
+ SET_DEFAULT_Font_Size                          = [!SetVariable Font_Size "#Default_Font_Size#"][!WriteKeyValue Variables Last_Font_Size "#Default_Font_Size#" "#@#\#Config#"]
+ SET_DEFAULT_Font_Size_Small                    = [!SetVariable Font_Size_Small "#Default_Font_Size_Small#"][!WriteKeyValue Variables Font_Size_Small "#Default_Font_Size_Small#" "#@#\#Config#"]
+ SET_DEFAULT_Faded_Font_Size_Small              = [!SetVariable Faded_Font_Size_Small "#Default_Faded_Font_Size_Small#"][!WriteKeyValue Variables Faded_Font_Size_Small "#Default_Faded_Font_Size_Small#" "#@#\#Config#"]
+ SET_DEFAULT_Font                               = [!SetVariable Font "#Default_Font#"][!WriteKeyValue Variables Font "#Default_Font#" "#@#\#Config#"]
+ SET_DEFAULT_Bold_Font                          = [!SetVariable Bold_Font "#Default_Bold_Font#"][!WriteKeyValue Variables Bold_Font "#Default_Bold_Font#" "#@#\#Config#"]
+ SET_DEFAULT_String_Style                       = [!SetVariable String_Style "#Default_String_Style#"][!WriteKeyValue Variables String_Style "#Default_String_Style#" "#@#\#Config#"]
+ SET_DEFAULT_T_String_Style                     = [!SetVariable T_String_Style "#Default_T_String_Style#"][!WriteKeyValue Variables T_String_Style "#Default_T_String_Style#" "#@#\#Config#"]
+
+; --- TIME FONTS
+
+ SET_DEFAULT_Time_Font_Main                     = [!SetVariable Time_Font_Main "#Default_Time_Font_Main#"][!WriteKeyValue Variables Time_Font_Main "#Default_Time_Font_Main#" "#@#\#Config#"]
+ SET_DEFAULT_Time_Font_Size_Day                 = [!SetVariable Time_Font_Size_Day "#Default_Time_Font_Size_Day#"][!WriteKeyValue Variables Time_Font_Size_Day "#Default_Time_Font_Size_Day#" "#@#\#Config#"]
+ SET_DEFAULT_Time_Font_Size_Cday                = [!SetVariable Time_Font_Size_Cday "#Default_Time_Font_Size_Cday#"][!WriteKeyValue Variables Time_Font_Size_Cday "#Default_Time_Font_Size_Cday#" "#@#\#Config#"]
+ SET_DEFAULT_Time_Font_Color_Main               = [!SetVariable Time_Font_Color_Main "#Default_Time_Font_Color_Main#"][!WriteKeyValue Variables Time_Font_Color_Main "#Default_Time_Font_Color_Main#" "#@#\#Config#"]
+ SET_DEFAULT_Time_Font_Color_Hours              = [!SetVariable Time_Font_Color_Hours "#Default_Time_Font_Color_Hours#"][!WriteKeyValue Variables Time_Font_Color_Hours "#Default_Time_Font_Color_Hours#" "#@#\#Config#"]
+ SET_DEFAULT_Time_Font_Color_Mins               = [!SetVariable Time_Font_Color_Mins "#Default_Time_Font_Color_Mins#"][!WriteKeyValue Variables Time_Font_Color_Mins "#Default_Time_Font_Color_Mins#" "#@#\#Config#"]
+ SET_DEFAULT_Time_Font_Size_Main                = [!SetVariable Time_Font_Size_Main "#Default_Time_Font_Size_Main#"][!WriteKeyValue Variables Time_Font_Size_Main "#Default_Time_Font_Size_Main#" "#@#\#Config#"]
+ SET_DEFAULT_Time_Font_Size_Hours               = [!SetVariable Time_Font_Size_Hours "#Default_Time_Font_Size_Hours#"][!WriteKeyValue Variables Time_Font_Size_Hours "#Default_Time_Font_Size_Hours#" "#@#\#Config#"]
+ SET_DEFAULT_Time_Font_Size_Mins                = [!SetVariable Time_Font_Size_Mins "#Default_Time_Font_Size_Mins#"][!WriteKeyValue Variables Time_Font_Size_Mins "#Default_Time_Font_Size_Mins#" "#@#\#Config#"]
+ SET_DEFAULT_Time_Font_Size_Secs                = [!SetVariable Time_Font_Size_Secs "#Default_Time_Font_Size_Secs#"][!WriteKeyValue Variables Time_Font_Size_Secs "#Default_Time_Font_Size_Secs#" "#@#\#Config#"]
+ SET_DEFAULT_Time_Font_Size_Date                = [!SetVariable Time_Font_Size_Date "#Default_Time_Font_Size_Date#"][!WriteKeyValue Variables Time_Font_Size_Date "#Default_Time_Font_Size_Date#" "#@#\#Config#"]
+ SET_DEFAULT_Time_Font_Size_Year                = [!SetVariable Time_Font_Size_Year "#Default_Time_Font_Size_Year#"][!WriteKeyValue Variables Time_Font_Size_Year "#Default_Time_Font_Size_Year#" "#@#\#Config#"]
+
+ SET_DEFAULT                                    = #SET_DEFAULT_Frosted_Glass_State#   #SET_DEFAULT_Translucent_State#   #SET_DEFAULT_ToolTips_State#   #SET_DEFAULT_Sounds_State#   #SET_DEFAULT_Update_Rate#   #SET_DEFAULT_Cycles_2nd_Divider#   #SET_DEFAULT_Cycles_3rd_Divider#   #SET_DEFAULT_Default_Divider_Negative_Meter#   #SET_DEFAULT_Default_Divider_Negative_Measure#   #SET_DEFAULT_Default_Delay_x2#   #SET_DEFAULT_Default_Delay_x3#   #SET_DEFAULT_Default_DV_Main#   #SET_DEFAULT_Player_Name#   #SET_DEFAULT_Player_Selection#   #SET_DEFAULT_Player_State#   #SET_DEFAULT_Player_Position_Step#   #SET_DEFAULT_Position_Forward#   #SET_DEFAULT_Position_Backward#   #SET_DEFAULT_Sys_Volume_Step#   #SET_DEFAULT_Sys_Volume_Down#   #SET_DEFAULT_Sys_Volume_Up#   #SET_DEFAULT_Player_Volume_Step#   #SET_DEFAULT_Player_Volume_Down#   #SET_DEFAULT_Player_Volume_Up#   #SET_DEFAULT_App_Volume_1S#   #SET_DEFAULT_App_Volume_2S#   #SET_DEFAULT_App_Volume_3S#   #SET_DEFAULT_App_Volume_4S#   #SET_DEFAULT_App_Volume_1#   #SET_DEFAULT_App_Volume_2#   #SET_DEFAULT_App_Volume_3#   #SET_DEFAULT_App_Volume_4#   #SET_DEFAULT_Net_Max#   #SET_DEFAULT_Ping_Max#   #SET_DEFAULT_Ping_Timeout#   #SET_DEFAULT_Ping_Host#   #SET_DEFAULT_Ping_App_1#   #SET_DEFAULT_Drive_One#   #SET_DEFAULT_Drive_Two#   #SET_DEFAULT_Temp_Folder#   #SET_DEFAULT_Cache_Folder#   #SET_DEFAULT_CPU_Load_Max#   #SET_DEFAULT_GPU_Load_Max#   #SET_DEFAULT_CPU_Temp_Max#   #SET_DEFAULT_GPU_Temp_Max#   #SET_DEFAULT_Bluetooth_State#   #SET_DEFAULT_Bluetooth_Visible#   #SET_DEFAULT_Audio_Devices_State#   #SET_DEFAULT_VRAM_Instance_State#   #SET_DEFAULT_Window_X#   #SET_DEFAULT_Window_Y#   #SET_DEFAULT_Anchor_X#   #SET_DEFAULT_Anchor_Y#   #SET_DEFAULT_Monitor_Num#   #SET_DEFAULT_Monitor#   #SET_DEFAULT_Skin_Alpha#   #SET_DEFAULT_Skin_Zpos#   #SET_DEFAULT_Last_Zpos#   #SET_DEFAULT_Draggable#   #SET_DEFAULT_Snapedge#   #SET_DEFAULT_Keep_On_Screen#   #SET_DEFAULT_CPU_Histogram_Width#   #SET_DEFAULT_CPU_Histogram_X#   #SET_DEFAULT_GPU_Histogram_Width#   #SET_DEFAULT_GPU_Histogram_X#   #SET_DEFAULT_Pad_Top#   #SET_DEFAULT_Pad_X_Wings_Left#   #SET_DEFAULT_Pad_X_Wings_Right#   #SET_DEFAULT_Height_State_One#   #SET_DEFAULT_Height_State_Two#   #SET_DEFAULT_Height_State_Three#   #SET_DEFAULT_Height_State_Four#   #SET_DEFAULT_Height_State_Five#   #SET_DEFAULT_Height_State_Six#   #SET_DEFAULT_Pad_Bottom_VRAM_Top#   #SET_DEFAULT_Pad_Bottom_CPU_Top#   #SET_DEFAULT_Pad_Bottom_Throttling#   #SET_DEFAULT_Pad_Bottom_Power_Limit#   #SET_DEFAULT_Pad_Bottom_GPU_Top#   #SET_DEFAULT_Pad_Bottom_DIsk_Read_Top#   #SET_DEFAULT_Pad_Bottom_Logs#   #SET_DEFAULT_Triangle_Top_Mechanic#   #SET_DEFAULT_Triangle_Bottom_Mechanic#   #SET_DEFAULT_Triangle_Left_Mechanic#   #SET_DEFAULT_Triangle_Right_Mechanic#   #SET_DEFAULT_CPU_Top_State#   #SET_DEFAULT_GPU_Top_State#   #SET_DEFAULT_CPU_Info_State#   #SET_DEFAULT_GPU_Info_State#   #SET_DEFAULT_RAM_Top_State#   #SET_DEFAULT_VRAM_Top_State#   #SET_DEFAULT_Threads_State#   #SET_DEFAULT_Throttling_State#   #SET_DEFAULT_Clock_Info_State#   #SET_DEFAULT_Power_Limit_State#   #SET_DEFAULT_Disk_Read_Top_State#   #SET_DEFAULT_Disk_Write_Top_State#   #SET_DEFAULT_Debug_State#   #SET_DEFAULT_Logs_Bottom_State#   #SET_DEFAULT_Logs_Top_State#   #SET_DEFAULT_Disk_Left_Side_State#   #SET_DEFAULT_Calculator_State#   #SET_DEFAULT_App_Volume_Control_Static_State#   #SET_DEFAULT_App_Volume_Control_Dyna_State#   #SET_DEFAULT_Pallete_State#   #SET_DEFAULT_Clock_And_Date_State#   #SET_DEFAULT_Player_1_Artist_Title_State#   #SET_DEFAULT_Player_1_Shuffle_State#   #SET_DEFAULT_Player_1_Repeat_State#   #SET_DEFAULT_Player_2_Artist_Title_State#   #SET_DEFAULT_Player_2_Shuffle_State#   #SET_DEFAULT_Player_2_Repeat_State#   #SET_DEFAULT_Settings_Menu#   #SET_DEFAULT_Aurora_BG_Behaviour_State#   #SET_DEFAULT_Settings_Main#   #SET_DEFAULT_Settings_Color#   #SET_DEFAULT_Settings_Hardware#   #SET_DEFAULT_Settings_Behaviour#   #SET_DEFAULT_Settings_Close#   #SET_DEFAULT_Settings_Main_Temp#   #SET_DEFAULT_Settings_Color_Temp#   #SET_DEFAULT_Settings_Hardware_Temp#   #SET_DEFAULT_Settings_Behaviour_Temp#   #SET_DEFAULT_Settings_Temp_Control#   #SET_DEFAULT_R_Color#   #SET_DEFAULT_G_Color#   #SET_DEFAULT_B_Color#   #SET_DEFAULT_A_Color#   #SET_DEFAULT_RGB_Color#   #SET_DEFAULT_RGB_Font_Color#   #SET_DEFAULT_RGB_Font_Warning_Color#   #SET_DEFAULT_Global_Color#   #SET_DEFAULT_Bar_Color#   #SET_DEFAULT_Bar_BG_Color#   #SET_DEFAULT_BG_Color#   #SET_DEFAULT_Font_Color#   #SET_DEFAULT_Font_Value_Color#   #SET_DEFAULT_Font_Warning_Color#   #SET_DEFAULT_Global_Alpha#   #SET_DEFAULT_Font_Alpha#   #SET_DEFAULT_Pallete_Alpha#   #SET_DEFAULT_Bar_BG_Alpha#   #SET_DEFAULT_Last_Global_Color#   #SET_DEFAULT_Last_Bar_Color#   #SET_DEFAULT_Last_BG_Color#   #SET_DEFAULT_Last_RGB_Color#   #SET_DEFAULT_Last_RGB_Font_Color#   #SET_DEFAULT_Last_Font_Color#   #SET_DEFAULT_Last_Value_Color#   #SET_DEFAULT_Last_Warning_Color#   #SET_DEFAULT_FontColor#   #SET_DEFAULT_Font_Size#   #SET_DEFAULT_Font_Size_Small#   #SET_DEFAULT_Faded_Font_Size_Small#   #SET_DEFAULT_Font#   #SET_DEFAULT_Bold_Font#   #SET_DEFAULT_String_Style#   #SET_DEFAULT_T_String_Style#   #SET_DEFAULT_Time_Font_Main#   #SET_DEFAULT_Time_Font_Size_Day#   #SET_DEFAULT_Time_Font_Size_Cday#   #SET_DEFAULT_Time_Font_Color_Main#   #SET_DEFAULT_Time_Font_Color_Hours#   #SET_DEFAULT_Time_Font_Color_Mins#   #SET_DEFAULT_Time_Font_Size_Main#   #SET_DEFAULT_Time_Font_Size_Hours#   #SET_DEFAULT_Time_Font_Size_Mins#   #Time_Font_Size_Secs#   #Time_Font_Size_Date#   #Time_Font_Size_Year#   [!Delay 2000][!Refresh]

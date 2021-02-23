@@ -1,6 +1,6 @@
 [Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.4b
+ Version                          = 2.1.5b
  Author                           = deflore08 (deflore08@gmail.com) | https://www.deviantart.com/deflore08
  License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
  Information                      = Settings module. Includes some meters and most variables to configure the skin.
@@ -989,7 +989,7 @@
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
  ; ; MouseActionCursorName            = #Cursor_Slider_Y#
- RightMouseUpAction               = [!SetVariable Sys_Volume_Step "#Default_System_Volume_Step#"][!WriteKeyValue Variables Sys_Volume_Step " #Default_System_Volume_Step#" "#@#\#Config#"][!UpdateMeterGroup #histograms#][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!UpdateMeasure m.System_Volume][!SetVariable Sys_Volume_Down "-#Sys_Volume_Step#"][!SetVariable Sys_Volume_Up "+#Sys_Volume_Step#"][!UpdateMeterGroup #cpu_histograms#][!Redraw]
+ RightMouseUpAction               = [!SetVariable Sys_Volume_Step "#Default_Sys_Volume_Step#"][!WriteKeyValue Variables Sys_Volume_Step " #Default_Sys_Volume_Step#" "#@#\#Config#"][!UpdateMeterGroup #histograms#][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!UpdateMeasure m.System_Volume][!SetVariable Sys_Volume_Down "-#Sys_Volume_Step#"][!SetVariable Sys_Volume_Up "+#Sys_Volume_Step#"][!UpdateMeterGroup #cpu_histograms#][!Redraw]
  MouseScrollUpAction              = [!SetVariable Sys_Volume_Step "(#Sys_Volume_Step# + 1)"][!WriteKeyValue Variables Sys_Volume_Step "(#Sys_Volume_Step# + 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeasure m.System_Volume][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!UpdateMeasure m.System_Volume][!SetVariable Sys_Volume_Down "-#Sys_Volume_Step#"][!SetVariable Sys_Volume_Up "+#Sys_Volume_Step#"][!UpdateMeterGroup #cpu_histograms#][!Redraw]
  MouseScrollDownAction            = [!SetVariable Sys_Volume_Step "(#Sys_Volume_Step# - 1)"][!WriteKeyValue Variables Sys_Volume_Step "(#Sys_Volume_Step# - 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeasure m.System_Volume][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!UpdateMeasure m.System_Volume][!SetVariable Sys_Volume_Down "-#Sys_Volume_Step#"][!SetVariable Sys_Volume_Up "+#Sys_Volume_Step#"][!UpdateMeterGroup #cpu_histograms#][!Redraw]
 

@@ -1,6 +1,6 @@
 [Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.4b
+ Version                          = 2.1.5b
  Author                           = deflore08 (deflore08@gmail.com) | https://www.deviantart.com/deflore08
  License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
  Information                      = Power Plan config and controller. Attention! Aurora will control a power plans even if you have 3rd-party apps for this. Original code parts by Pul53dr1v3r from Rainformer.

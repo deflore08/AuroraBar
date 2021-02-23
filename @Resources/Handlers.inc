@@ -1,6 +1,6 @@
 [Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.4b
+ Version                          = 2.1.5b
  Author                           = deflore08 (deflore08@gmail.com) | https://www.deviantart.com/deflore08
  License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
  Information                      = It handles all update cycles inside Aurora. This approach is designed to make utilization evenly and neutralize Rainmeter's freezes, to protect you from lags and to minimize affection on your system as less as it possible. At least for a while.. Remember, the more you use, the more performance you lose. 
