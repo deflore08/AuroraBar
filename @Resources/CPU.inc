@@ -1,7 +1,7 @@
 ﻿[Metadata]
  Name                             = AuroraBar
  Version                          = 2.1.5b
- Author                           = deflore08 (deflore08@gmail.com) | https://www.deviantart.com/deflore08
+ Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
  License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
  Information                      = All CPU meters, measures, bars, graphs, text and other. It's 3, 4, 6 and 7 sections.
 
@@ -795,12 +795,7 @@
  ToolTipHidden                    = #ToolTips_State#
  DynamicVariables                 = 1
  Group                            = #cpu# | #cpu_histograms# | #histograms#
-
- RightMouseUpAction               = [!CommandMeasure m.System_Volume "SetVolume 100"][!UpdateMeasure m.System_Volume][!UpdateMeter b.System_Volume][!Redraw]
- MouseScrollDownAction            = [!CommandMeasure m.System_Volume "ChangeVolume #Sys_Volume_Down#"][!UpdateMeasure m.System_Volume][!UpdateMeter b.System_Volume][!Redraw]
- MouseScrollUpAction              = [!CommandMeasure m.System_Volume "ChangeVolume #Sys_Volume_Up#"][!UpdateMeasure m.System_Volume][!UpdateMeter b.System_Volume][!Redraw]
- MiddleMouseUpAction              = [!CommandMeasure m.System_Volume "ToggleMute"][!UpdateMeasure m.System_Volume][!UpdateMeter b.System_Volume][!Redraw]
- LeftMouseDownAction              = [!CommandMeasure m.CPU_Volume_Slider "Start"][!EnableMeasure m.CPU_Volume_Slider_Set][!UpdateMeasure m.System_Volume][!UpdateMeasure m.Percent_System_Volume][!UpdateMeasure m.Volume_Values_Controller][!UpdateMeter b.System_Volume][!UpdateMeter t.System_Volume][!Redraw]
+ MouseActionCursorName            = #Cursor_Slider_X#
 
 [formula_CPU_LOAD_HISTOGRAM_Y]
  Measure                          = CALC
@@ -829,8 +824,17 @@
  DynamicVariables                 = 1
  Group                            = #cpu# | #cpu_histograms# | #histograms#
 
+[shape.CPU_HISTOGRAM_MOUSE_SLIDER]
+ Meter                            = SHAPE
+ X                                = #CPU_Histogram_X#
+ Y                                = (#Pad_Top# + 87)
+ Shape                            = Rectangle 0,0,#CPU_Histogram_Width#,49 | Extend MyModifiers1
+ MyModifiers1                     = Fill Color 0,0,0,1 | StrokeWidth 0 | Stroke Color 46,115,31,255
+ DynamicVariables                 = 1
+ Group                            = #cpu# | #cpu_histograms# | #histograms#
+ MouseActionCursorName            = #Cursor_Slider_X#
  RightMouseUpAction               = [!CommandMeasure m.System_Volume "SetVolume 100"][!UpdateMeasure m.System_Volume][!UpdateMeter b.System_Volume][!Redraw]
- MouseScrollDownAction            = [!CommandMeasure m.System_Volume "ChangeVolume #Sys_Volume_Down#"][!UpdateMeasure m.System_Volume][!UpdateMeter b.System_Volume][!Redraw]
- MouseScrollUpAction              = [!CommandMeasure m.System_Volume "ChangeVolume #Sys_Volume_Up#"][!UpdateMeasure m.System_Volume][!UpdateMeter b.System_Volume][!Redraw]
+ MouseScrollDownAction            = [!CommandMeasure m.System_Volume "ChangeVolume -#Sys_Volume_Step#"][!UpdateMeasure m.System_Volume][!UpdateMeter b.System_Volume][!Redraw]
+ MouseScrollUpAction              = [!CommandMeasure m.System_Volume "ChangeVolume +#Sys_Volume_Step#"][!UpdateMeasure m.System_Volume][!UpdateMeter b.System_Volume][!Redraw]
  MiddleMouseUpAction              = [!CommandMeasure m.System_Volume "ToggleMute"][!UpdateMeasure m.System_Volume][!UpdateMeter b.System_Volume][!Redraw]
  LeftMouseDownAction              = [!CommandMeasure m.CPU_Volume_Slider "Start"][!EnableMeasure m.CPU_Volume_Slider_Set][!Delay 1][!UpdateMeasure m.System_Volume][!Redraw]

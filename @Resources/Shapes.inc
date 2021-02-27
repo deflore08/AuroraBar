@@ -1,7 +1,7 @@
 [Metadata]
  Name                             = AuroraBar
  Version                          = 2.1.5b
- Author                           = deflore08 (deflore08@gmail.com) | https://www.deviantart.com/deflore08
+ Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
  License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
  Information                      = It contains all (almost all..) lines and shapes
 
@@ -1706,6 +1706,52 @@
  MyPath                           = 0, 0 | LineTo -7, -4 | LineTo -7, 0 | LineTo -14, -4 | LineTo -7, -8 | LineTo -7, -4 | LineTo 0, -8 | LineTo 0, 0
  X                                = 940 
  Y                                = 160
+
+
+[shape.SHUFFLE_LINE_1]
+ Meter                            = SHAPE
+ Shape                            = Path MyPath | Strokewidth 1 | Stroke Color #Global_Color# | Fill Color 0, 0, 0, 100
+ MyPath                           = 0, 0 | LineTo 5, 0 | LineTo 9, -6 | LineTo 14, -6
+ X                                = 905
+ Y                                = (#Pad_Top# + 147)
+ DynamicVariables                 = 1
+ Hidden                           = 1
+
+[shape.SHUFFLE_LINE_2]
+ Meter                            = SHAPE
+ Shape                            = Path MyPath | Strokewidth 1 | Stroke Color #Global_Color# | Fill Color 0, 0, 0, 100
+ MyPath                           = 0, -6 | LineTo 0, -6 | LineTo 5, -6 | LineTo 9, 0 | LineTo 14, 0
+ X                                = 905
+ Y                                = (#Pad_Top# + 147)
+ DynamicVariables                 = 1
+ Hidden                           = 1
+
+[shape.SHUFFLE_TRIANGLE_1]
+ Meter                            = SHAPE
+ Shape                            = Path MyPath | Strokewidth 1 | Stroke Color #Global_Color# | Fill Color 0, 0, 0, 100
+ MyPath                           = 0, 0 | LineTo 3, 3 | LineTo 0, 6 | LineTo 0, 0
+ X                                = 912 
+ Y                                = (#Pad_Top# + 151)
+ DynamicVariables                 = 1
+ Hidden                           = 1
+
+[shape.SHUFFLE_TRIANGLE_2]
+ Meter                            = SHAPE
+ Shape                            = Path MyPath | Strokewidth 1 | Stroke Color #Global_Color# | Fill Color 0, 0, 0, 100
+ MyPath                           = 0, 0 | LineTo 3, 3 | LineTo 0, 6 | LineTo 0, 0
+ X                                = 912 
+ Y                                = (#Pad_Top# + 157)
+ DynamicVariables                 = 1
+ Hidden                           = 1
+
+[shape.REPEAT_LINE]
+ Meter                            = SHAPE
+ Shape                            = Path MyPath | Strokewidth 1 | Stroke Color #Global_Color# | Fill Color 0, 0, 0, 100
+ MyPath                           = -4, 0 | LineTo -4, 8 | LineTo 9, 8 | LineTo 9, 0 | LineTo 2, 0
+ X                                = 1005
+ Y                                = (#Pad_Top# + 140)
+ DynamicVariables                 = 1
+ Hidden                           = 1
 
 [shape.Pause_Left_Button]
  Shape                            = Path MyPath | Strokewidth 1 | Stroke Color #Global_Color# | Fill Color 0, 0, 0, 100

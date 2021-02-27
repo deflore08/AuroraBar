@@ -1,7 +1,7 @@
 ﻿[Metadata]
  Name                             = AuroraBar
  Version                          = 2.1.5b
- Author                           = deflore08 (deflore08@gmail.com) | https://www.deviantart.com/deflore08
+ Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
  License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
  Information                      = All GPU Meters, measures, bars, graphs, text in section 7
  
@@ -382,12 +382,6 @@
  DynamicVariables                 = 1
  Group                            = #gpu# | #gpu_histograms# | #histograms#
 
- MouseScrollDownAction            = [!CommandMeasure sensor.PLAYER "SetVolume #Player_Volume_Down#"][!UpdateMeasure sensor.PLAYER][!UpdateMeter b.Player_Volume][!Redraw]
- MouseScrollUpAction              = [!CommandMeasure sensor.PLAYER "SetVolume #Player_Volume_Up#"][!UpdateMeasure sensor.PLAYER][!UpdateMeter b.Player_Volume][!Redraw]
- MiddleMouseUpAction              = [!CommandMeasure sensor.PLAYER "SetVolume 0"][!UpdateMeasure sensor.PLAYER][!UpdateMeter b.Player_Volume][!Redraw]
- RightMouseUpAction               = [!CommandMeasure sensor.PLAYER "SetVolume 100"][!UpdateMeasure sensor.PLAYER][!UpdateMeter b.Player_Volume][!Redraw]
- LeftMouseDownAction              = [!CommandMeasure m.GPU_Volume_Slider "Start"][!EnableMeasure m.GPU_Volume_Slider_Set][!Redraw]
-
 [formula_GPU_TEMPERATURE_HISTOGRAM_Y]
  Measure                          = CALC
  Formula                          = (#Pad_Top# + 112)
@@ -416,8 +410,17 @@
  DynamicVariables                 = 1
  Group                            = #gpu# | #gpu_histograms# | #histograms#
 
- MouseScrollDownAction            = [!CommandMeasure sensor.PLAYER "SetVolume #Player_Volume_Down#"][!UpdateMeasure sensor.PLAYER][!UpdateMeter b.Player_Volume][!Redraw]
- MouseScrollUpAction              = [!CommandMeasure sensor.PLAYER "SetVolume #Player_Volume_Up#"][!UpdateMeasure sensor.PLAYER][!UpdateMeter b.Player_Volume][!Redraw]
+[shape.GPU_HISTOGRAM_MOUSE_SLIDER]
+ Meter                            = SHAPE
+ X                                = #GPU_Histogram_X#
+ Y                                = (#Pad_Top# + 87)
+ Shape                            = Rectangle 0,0,#GPU_Histogram_Width#,49 | Extend MyModifiers1
+ MyModifiers1                     = Fill Color 0,0,0,1 | StrokeWidth 0 | Stroke Color 46,115,31,255
+ DynamicVariables                 = 1
+ Group                            = #gpu# | #gpu_histograms# | #histograms#
+ MouseActionCursorName            = #Cursor_Slider_X#
+ MouseScrollDownAction            = [!CommandMeasure sensor.PLAYER "SetVolume -#Player_Volume_Step#"][!UpdateMeasure sensor.PLAYER][!UpdateMeter b.Player_Volume][!Redraw]
+ MouseScrollUpAction              = [!CommandMeasure sensor.PLAYER "SetVolume +#Player_Volume_Step#"][!UpdateMeasure sensor.PLAYER][!UpdateMeter b.Player_Volume][!Redraw]
  MiddleMouseUpAction              = [!CommandMeasure sensor.PLAYER "SetVolume 0"][!UpdateMeasure sensor.PLAYER][!UpdateMeter b.Player_Volume][!Redraw]
  RightMouseUpAction               = [!CommandMeasure sensor.PLAYER "SetVolume 100"][!UpdateMeasure sensor.PLAYER][!UpdateMeter b.Player_Volume][!Redraw]
  LeftMouseDownAction              = [!CommandMeasure m.GPU_Volume_Slider "Start"][!EnableMeasure m.GPU_Volume_Slider_Set][!Redraw]

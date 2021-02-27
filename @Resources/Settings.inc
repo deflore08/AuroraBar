@@ -1,7 +1,7 @@
 [Metadata]
  Name                             = AuroraBar
  Version                          = 2.1.5b
- Author                           = deflore08 (deflore08@gmail.com) | https://www.deviantart.com/deflore08
+ Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
  License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
  Information                      = Settings module. Includes some meters and most variables to configure the skin.
 
@@ -988,10 +988,10 @@
  DynamicVariables                 = 1
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
- ; ; MouseActionCursorName            = #Cursor_Slider_Y#
- RightMouseUpAction               = [!SetVariable Sys_Volume_Step "#Default_Sys_Volume_Step#"][!WriteKeyValue Variables Sys_Volume_Step " #Default_Sys_Volume_Step#" "#@#\#Config#"][!UpdateMeterGroup #histograms#][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!UpdateMeasure m.System_Volume][!SetVariable Sys_Volume_Down "-#Sys_Volume_Step#"][!SetVariable Sys_Volume_Up "+#Sys_Volume_Step#"][!UpdateMeterGroup #cpu_histograms#][!Redraw]
- MouseScrollUpAction              = [!SetVariable Sys_Volume_Step "(#Sys_Volume_Step# + 1)"][!WriteKeyValue Variables Sys_Volume_Step "(#Sys_Volume_Step# + 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeasure m.System_Volume][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!UpdateMeasure m.System_Volume][!SetVariable Sys_Volume_Down "-#Sys_Volume_Step#"][!SetVariable Sys_Volume_Up "+#Sys_Volume_Step#"][!UpdateMeterGroup #cpu_histograms#][!Redraw]
- MouseScrollDownAction            = [!SetVariable Sys_Volume_Step "(#Sys_Volume_Step# - 1)"][!WriteKeyValue Variables Sys_Volume_Step "(#Sys_Volume_Step# - 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeasure m.System_Volume][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!UpdateMeasure m.System_Volume][!SetVariable Sys_Volume_Down "-#Sys_Volume_Step#"][!SetVariable Sys_Volume_Up "+#Sys_Volume_Step#"][!UpdateMeterGroup #cpu_histograms#][!Redraw]
+ MouseActionCursorName            = #Cursor_Slider_Y#
+ RightMouseUpAction               = [!SetVariable Sys_Volume_Step "#Default_Sys_Volume_Step#"][!WriteKeyValue Variables Sys_Volume_Step " #Default_Sys_Volume_Step#" "#@#\#Config#"][!UpdateMeter shape.CPU_HISTOGRAM_MOUSE_SLIDER][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!UpdateMeasure m.System_Volume][!UpdateMeter shape.CPU_HISTOGRAM_MOUSE_SLIDER][!Redraw]
+ MouseScrollUpAction              = [!SetVariable Sys_Volume_Step "(#Sys_Volume_Step# + 1)"][!WriteKeyValue Variables Sys_Volume_Step "(#Sys_Volume_Step# + 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeasure m.System_Volume][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!UpdateMeasure m.System_Volume][!UpdateMeter shape.CPU_HISTOGRAM_MOUSE_SLIDER][!Redraw]
+ MouseScrollDownAction            = [!SetVariable Sys_Volume_Step "(#Sys_Volume_Step# - 1)"][!WriteKeyValue Variables Sys_Volume_Step "(#Sys_Volume_Step# - 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeasure m.System_Volume][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!UpdateMeasure m.System_Volume][!UpdateMeter shape.CPU_HISTOGRAM_MOUSE_SLIDER][!Redraw]
 
 [text.Main_Settings_SYSTEM_VOLUME_STEP_Value]
  Meter                            = STRING
@@ -1004,10 +1004,10 @@
  DynamicVariables                 = 1
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
- ; ; MouseActionCursorName            = #Cursor_Slider_Y#
- RightMouseUpAction               = [!SetVariable Sys_Volume_Step "#Default_System_Volume_Step#"][!WriteKeyValue Variables Sys_Volume_Step " #Default_System_Volume_Step#" "#@#\#Config#"][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!SetVariable Sys_Volume_Down "-#Sys_Volume_Step#"][!SetVariable Sys_Volume_Up "+#Sys_Volume_Step#"][!UpdateMeterGroup #cpu_histograms#][!Redraw]
- MouseScrollUpAction              = [!SetVariable Sys_Volume_Step "(#Sys_Volume_Step# + 1)"][!WriteKeyValue Variables Sys_Volume_Step "(#Sys_Volume_Step# + 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!SetVariable Sys_Volume_Down "-#Sys_Volume_Step#"][!SetVariable Sys_Volume_Up "+#Sys_Volume_Step#"][!UpdateMeterGroup #cpu_histograms#][!Redraw]
- MouseScrollDownAction            = [!SetVariable Sys_Volume_Step "(#Sys_Volume_Step# - 1)"][!WriteKeyValue Variables Sys_Volume_Step "(#Sys_Volume_Step# - 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!SetVariable Sys_Volume_Down "-#Sys_Volume_Step#"][!SetVariable Sys_Volume_Up "+#Sys_Volume_Step#"][!UpdateMeterGroup #cpu_histograms#][!Redraw]
+ MouseActionCursorName            = #Cursor_Slider_Y#
+ RightMouseUpAction               = [!SetVariable Sys_Volume_Step "#Default_Sys_Volume_Step#"][!WriteKeyValue Variables Sys_Volume_Step " #Default_Sys_Volume_Step#" "#@#\#Config#"][!UpdateMeter shape.CPU_HISTOGRAM_MOUSE_SLIDER][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!UpdateMeasure m.System_Volume][!UpdateMeter shape.CPU_HISTOGRAM_MOUSE_SLIDER][!Redraw]
+ MouseScrollUpAction              = [!SetVariable Sys_Volume_Step "(#Sys_Volume_Step# + 1)"][!WriteKeyValue Variables Sys_Volume_Step "(#Sys_Volume_Step# + 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeasure m.System_Volume][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!UpdateMeasure m.System_Volume][!UpdateMeter shape.CPU_HISTOGRAM_MOUSE_SLIDER][!Redraw]
+ MouseScrollDownAction            = [!SetVariable Sys_Volume_Step "(#Sys_Volume_Step# - 1)"][!WriteKeyValue Variables Sys_Volume_Step "(#Sys_Volume_Step# - 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeasure m.System_Volume][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP][!UpdateMeter text.Main_Settings_SYSTEM_VOLUME_STEP_Value][!UpdateMeasure m.System_Volume][!UpdateMeter shape.CPU_HISTOGRAM_MOUSE_SLIDER][!Redraw]
 
 [text.Main_Settings_PLAYER_VOLUME_STEP]
  Meter                            = STRING
@@ -1019,10 +1019,10 @@
  DynamicVariables                 = 1
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
- ; ; MouseActionCursorName            = #Cursor_Slider_Y#
- RightMouseUpAction               = [!SetVariable Player_Volume_Step "#Default_Player_Volume_Step#"][!WriteKeyValue Variables Player_Volume_Step " #Default_Player_Volume_Step#" "#@#\#Config#"][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP_Value][!SetVariable Player_Volume_Down "-#Player_Volume_Step#"][!SetVariable Player_Volume_Up "+#Player_Volume_Step#"][!WriteKeyValue Variables Player_Volume_Up "+#Player_Volume_Step#" "#@#\#Config#"][!WriteKeyValue Variables Player_Volume_Down "-#Player_Volume_Step#" "#@#\#Config#"][!UpdateMeterGroup #gpu_histograms#][!Redraw]
- MouseScrollUpAction              = [!SetVariable Player_Volume_Step "(#Player_Volume_Step# + 1)"][!WriteKeyValue Variables Player_Volume_Step "(#Player_Volume_Step# + 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP_Value][!SetVariable Player_Volume_Down "-#Player_Volume_Step#"][!SetVariable Player_Volume_Up "+#Player_Volume_Step#"][!WriteKeyValue Variables Player_Volume_Up "+#Player_Volume_Step#" "#@#\#Config#"][!UpdateMeterGroup #gpu_histograms#][!Redraw]
- MouseScrollDownAction            = [!SetVariable Player_Volume_Step "(#Player_Volume_Step# - 1)"][!WriteKeyValue Variables Player_Volume_Step "(#Player_Volume_Step# - 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP_Value][!SetVariable Player_Volume_Down "-#Player_Volume_Step#"][!WriteKeyValue Variables Player_Volume_Down "-#Player_Volume_Step#" "#@#\#Config#"][!UpdateMeterGroup #gpu_histograms#][!Redraw]
+ MouseActionCursorName            = #Cursor_Slider_Y#
+ RightMouseUpAction               = [!SetVariable Player_Volume_Step "#Default_Player_Volume_Step#"][!WriteKeyValue Variables Player_Volume_Step " #Default_Player_Volume_Step#" "#@#\#Config#"][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP_Value][!UpdateMeter shape.GPU_HISTOGRAM_MOUSE_SLIDER][!Redraw]
+ MouseScrollUpAction              = [!SetVariable Player_Volume_Step "(#Player_Volume_Step# + 1)"][!WriteKeyValue Variables Player_Volume_Step "(#Player_Volume_Step# + 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP_Value][!UpdateMeter shape.GPU_HISTOGRAM_MOUSE_SLIDER][!Redraw]
+ MouseScrollDownAction            = [!SetVariable Player_Volume_Step "(#Player_Volume_Step# - 1)"][!WriteKeyValue Variables Player_Volume_Step "(#Player_Volume_Step# - 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP_Value][!UpdateMeter shape.GPU_HISTOGRAM_MOUSE_SLIDER][!Redraw]
 
 [text.Main_Settings_PLAYER_VOLUME_STEP_Value]
  Meter                            = STRING
@@ -1035,10 +1035,10 @@
  DynamicVariables                 = 1
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
- ; ; MouseActionCursorName            = #Cursor_Slider_Y#
- RightMouseUpAction               = [!SetVariable Player_Volume_Step "#Default_Player_Volume_Step#"][!WriteKeyValue Variables Player_Volume_Step " #Default_Player_Volume_Step#" "#@#\#Config#"][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP_Value][!SetVariable Player_Volume_Down "-#Player_Volume_Step#"][!SetVariable Player_Volume_Up "+#Player_Volume_Step#"][!WriteKeyValue Variables Player_Volume_Up "+#Player_Volume_Step#" "#@#\#Config#"][!WriteKeyValue Variables Player_Volume_Down "-#Player_Volume_Step#" "#@#\#Config#"][!UpdateMeterGroup #gpu_histograms#][!Redraw]
- MouseScrollUpAction              = [!SetVariable Player_Volume_Step "(#Player_Volume_Step# + 1)"][!WriteKeyValue Variables Player_Volume_Step "(#Player_Volume_Step# + 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP_Value][!SetVariable Player_Volume_Down "-#Player_Volume_Step#"][!SetVariable Player_Volume_Up "+#Player_Volume_Step#"][!WriteKeyValue Variables Player_Volume_Up "+#Player_Volume_Step#" "#@#\#Config#"][!UpdateMeterGroup #gpu_histograms#][!Redraw]
- MouseScrollDownAction            = [!SetVariable Player_Volume_Step "(#Player_Volume_Step# - 1)"][!WriteKeyValue Variables Player_Volume_Step "(#Player_Volume_Step# - 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP_Value][!SetVariable Player_Volume_Down "-#Player_Volume_Step#"][!WriteKeyValue Variables Player_Volume_Down "-#Player_Volume_Step#" "#@#\#Config#"][!UpdateMeterGroup #gpu_histograms#][!Redraw]
+ MouseActionCursorName            = #Cursor_Slider_Y#
+ RightMouseUpAction               = [!SetVariable Player_Volume_Step "#Default_Player_Volume_Step#"][!WriteKeyValue Variables Player_Volume_Step " #Default_Player_Volume_Step#" "#@#\#Config#"][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP_Value][!UpdateMeter shape.GPU_HISTOGRAM_MOUSE_SLIDER][!Redraw]
+ MouseScrollUpAction              = [!SetVariable Player_Volume_Step "(#Player_Volume_Step# + 1)"][!WriteKeyValue Variables Player_Volume_Step "(#Player_Volume_Step# + 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP_Value][!UpdateMeter shape.GPU_HISTOGRAM_MOUSE_SLIDER][!Redraw]
+ MouseScrollDownAction            = [!SetVariable Player_Volume_Step "(#Player_Volume_Step# - 1)"][!WriteKeyValue Variables Player_Volume_Step "(#Player_Volume_Step# - 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP][!UpdateMeter text.Main_Settings_PLAYER_VOLUME_STEP_Value][!UpdateMeter shape.GPU_HISTOGRAM_MOUSE_SLIDER][!Redraw]
 
 [text.Main_Settings_PLAYER_POSITION_STEP]
  Meter                            = STRING
@@ -1051,8 +1051,8 @@
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
  ; ; MouseActionCursorName            = #Cursor_Slider_Y#
- RightMouseUpAction               = [!SetVariable Player_Position_Step "#Default_Player_Position_Step#"][!WriteKeyValue Variables Player_Position_Step " #Default_Player_Position_Step#" "#@#\#Config#"][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP_Value][!SetVariable Position_Forward "+#Player_Position_Step#"][!SetVariable Position_Backward "-#Player_Position_Step#"][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
- MouseScrollUpAction              = [!SetVariable Player_Position_Step "(#Player_Position_Step# + 1)"][!WriteKeyValue Variables Player_Position_Step "(#Player_Position_Step# + 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP_Value][!SetVariable Position_Forward "+#Player_Position_Step#"][!SetVariable Position_Backward "-#Player_Position_Step#"][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
+ RightMouseUpAction               = [!SetVariable Player_Position_Step "#Default_Player_Position_Step#"][!WriteKeyValue Variables Player_Position_Step " #Default_Player_Position_Step#" "#@#\#Config#"][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP_Value][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
+ MouseScrollUpAction              = [!SetVariable Player_Position_Step "(#Player_Position_Step# + 1)"][!WriteKeyValue Variables Player_Position_Step "(#Player_Position_Step# + 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP_Value][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
  MouseScrollDownAction            = [!SetVariable Player_Position_Step "(#Player_Position_Step# - 1)"][!WriteKeyValue Variables Player_Position_Step "(#Player_Position_Step# - 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP_Value][!Redraw]
 
 [text.Main_Settings_PLAYER_POSITION_STEP_Value]
@@ -1067,8 +1067,8 @@
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
  ; ; MouseActionCursorName            = #Cursor_Slider_Y#
- RightMouseUpAction               = [!SetVariable Player_Position_Step "#Default_Player_Position_Step#"][!WriteKeyValue Variables Player_Position_Step " #Default_Player_Position_Step#" "#@#\#Config#"][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP_Value][!SetVariable Position_Forward "+#Player_Position_Step#"][!SetVariable Position_Backward "-#Player_Position_Step#"][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
- MouseScrollUpAction              = [!SetVariable Player_Position_Step "(#Player_Position_Step# + 1)"][!WriteKeyValue Variables Player_Position_Step "(#Player_Position_Step# + 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP_Value][!SetVariable Position_Forward "+#Player_Position_Step#"][!SetVariable Position_Backward "-#Player_Position_Step#"][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
+ RightMouseUpAction               = [!SetVariable Player_Position_Step "#Default_Player_Position_Step#"][!WriteKeyValue Variables Player_Position_Step " #Default_Player_Position_Step#" "#@#\#Config#"][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP_Value][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
+ MouseScrollUpAction              = [!SetVariable Player_Position_Step "(#Player_Position_Step# + 1)"][!WriteKeyValue Variables Player_Position_Step "(#Player_Position_Step# + 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP_Value][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
  MouseScrollDownAction            = [!SetVariable Player_Position_Step "(#Player_Position_Step# - 1)"][!WriteKeyValue Variables Player_Position_Step "(#Player_Position_Step# - 1)" "#@#\#Config#"][!UpdateMeasure m.VALUES_CONTROLLER][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP][!UpdateMeter text.Main_Settings_PLAYER_POSITION_STEP_Value][!Redraw]
 
 ; - MAIN SETTINGS TEXTS END

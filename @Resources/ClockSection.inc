@@ -1,7 +1,7 @@
 ﻿[Metadata]
  Name                             = AuroraBar
  Version                          = 2.1.5b
- Author                           = deflore08 (deflore08@gmail.com) | https://www.deviantart.com/deflore08
+ Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
  License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
  Information                      = Clock, weather, volume, mid section
 
@@ -329,9 +329,9 @@
  DynamicVariables                 = 1
  Hidden                           = (#Player_State# + #Clock_And_Date_State#)
  Group                            = #player_controls#
-
- MouseScrollDownAction            = [!CommandMeasure sensor.PLAYER "SetPosition #Position_Backward#"][!UpdateMeasure sensor.PLAYER][!UpdateMeasure sensor.PLAYER_PROGRESS][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
- MouseScrollUpAction              = [!CommandMeasure sensor.PLAYER "SetPosition #Position_Forward#"][!UpdateMeasure sensor.PLAYER][!UpdateMeasure sensor.PLAYER_PROGRESS][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
+ MouseActionCursorName            = #Cursor_Slider_X#
+ MouseScrollDownAction            = [!CommandMeasure sensor.PLAYER "SetPosition -#Player_Position_Step#"][!UpdateMeasure sensor.PLAYER][!UpdateMeasure sensor.PLAYER_PROGRESS][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
+ MouseScrollUpAction              = [!CommandMeasure sensor.PLAYER "SetPosition +#Player_Position_Step#"][!UpdateMeasure sensor.PLAYER][!UpdateMeasure sensor.PLAYER_PROGRESS][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
  LeftMouseDownAction              = [!CommandMeasure sensor.PLAYER_1_PROGRESS_SLIDER "Start"][!EnableMeasure sensor.PLAYER_1_PROGRESS_SLIDER_SET]
 
 [bar.PROGRESS_SHADOW]
@@ -346,9 +346,9 @@
  DynamicVariables                 = 1
  Hidden                           = (#Player_State# + #Clock_And_Date_State#)
  Group                            = #player_controls#
-
- MouseScrollDownAction            = [!CommandMeasure sensor.PLAYER "SetPosition #Position_Backward#"][!UpdateMeasure sensor.PLAYER][!UpdateMeasure sensor.PLAYER_PROGRESS][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
- MouseScrollUpAction              = [!CommandMeasure sensor.PLAYER "SetPosition #Position_Forward#"][!UpdateMeasure sensor.PLAYER][!UpdateMeasure sensor.PLAYER_PROGRESS][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
+ MouseActionCursorName            = #Cursor_Slider_X#
+ MouseScrollDownAction            = [!CommandMeasure sensor.PLAYER "SetPosition -#Player_Position_Step#"][!UpdateMeasure sensor.PLAYER][!UpdateMeasure sensor.PLAYER_PROGRESS][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
+ MouseScrollUpAction              = [!CommandMeasure sensor.PLAYER "SetPosition +#Player_Position_Step#"][!UpdateMeasure sensor.PLAYER][!UpdateMeasure sensor.PLAYER_PROGRESS][!UpdateMeter bar.PROGRESS][!UpdateMeter bar.PROGRESS_SHADOW][!Redraw]
  LeftMouseDownAction              = [!CommandMeasure sensor.PLAYER_1_PROGRESS_SLIDER "Start"][!EnableMeasure sensor.PLAYER_1_PROGRESS_SLIDER_SET]
 
 ; - BARS END

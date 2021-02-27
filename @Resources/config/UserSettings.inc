@@ -1,7 +1,7 @@
 [Metadata]
  Name                             = AuroraBar
  Version                          = 2.1.5b
- Author                           = deflore08 (deflore08@gmail.com) | https://www.deviantart.com/deflore08
+ Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
  License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
  Information                      = User-defined settings
 
@@ -39,19 +39,12 @@
 
 ; - Player Positions steps
 
- Player_Position_Step             =5
- Position_Forward                 =+5
- Position_Backward                =-5
+ Player_Position_Step             = 1
 
 ; - Volume control steps
 
- Sys_Volume_Step                  =5
- Sys_Volume_Down                  =-5
- Sys_Volume_Up                    =+5
-
- Player_Volume_Step               =5
- Player_Volume_Down               =-5
- Player_Volume_Up                 =+5
+ Sys_Volume_Step                  = 1
+ Player_Volume_Step               =1
 
 ; - Applications
 
@@ -107,7 +100,7 @@
  Anchor_X                         =0
  Anchor_Y                         =50
 
- Monitor_Num                      =1
+ Monitor_Num                      =4
  Monitor                          =@4
  Skin_Alpha                       =255
 
@@ -130,7 +123,7 @@
 
 ; - Default value is "110". If your taskbar is on top of screen - you may use 150 and 140 (if icons is minimized) values to keep Aurora below taskbar. 
 
- Pad_Top                         = 0
+ Pad_Top                         = 110
  Pad_X_Wings_Left                = 
  Pad_X_Wings_Right               =
 
@@ -138,47 +131,47 @@
 
 ; - #Height_State_One(1-6)# contains an unique value from 0 to 7. It needs to calculate HEIGHT mechanic (it's about TOP) in a formulas below
 
- Height_State_One                =0
- Height_State_Two                =0
- Height_State_Three              =0
- Height_State_Four               =0
- Height_State_Five               =0
- Height_State_Six                =0
+ Height_State_One                = 2
+ Height_State_Two                = 3
+ Height_State_Three              = 6
+ Height_State_Four               = 7
+ Height_State_Five               = 5
+ Height_State_Six                = 4
 
 ; - #Pad_Bottom_N# defines a Y position for elements below BG. If it's hided, it will 112px. 
 
- Pad_Bottom_VRAM_Top             = 112
- Pad_Bottom_CPU_Top              = 112
- Pad_Bottom_Throttling           = 112
- Pad_Bottom_Power_Limit          = 112
- Pad_Bottom_GPU_Top              = 112
- Pad_Bottom_Disk_Read_Top        = 112
+ Pad_Bottom_VRAM_Top             = 0
+ Pad_Bottom_CPU_Top              = 0
+ Pad_Bottom_Throttling           = 0
+ Pad_Bottom_Power_Limit          = 0
+ Pad_Bottom_GPU_Top              = 0
+ Pad_Bottom_Disk_Read_Top        = 0
  Pad_Bottom_Logs                 = 112
 
 ; --- TRIANGLE mechanics determines behaviour of 4 triangles from all sides
 
- Triangle_Top_Mechanic           =1
- Triangle_Bottom_Mechanic        = 0
+ Triangle_Top_Mechanic           = 0
+ Triangle_Bottom_Mechanic        = 1
  Triangle_Left_Mechanic          =0
  Triangle_Right_Mechanic         =0
 
 ; --- SECTIONS STATES
 
- CPU_Top_State                   =1
- GPU_Top_State                   =1  
- CPU_Info_State                  =1 
- GPU_Info_State                  =1 
- RAM_Top_State                   =1
- VRAM_Top_State                  =1 
- Threads_State                   =1 
- Throttling_State                =1 
- Clock_Info_State                =1 
- Power_Limit_State               =1 
- Disk_Read_Top_State             =1 
- Disk_Write_Top_State            =1 
+ CPU_Top_State                   = 0
+ GPU_Top_State                   = 0  
+ CPU_Info_State                  = 0 
+ GPU_Info_State                  = 0 
+ RAM_Top_State                   = 0
+ VRAM_Top_State                  = 0 
+ Threads_State                   = 0 
+ Throttling_State                = 0 
+ Clock_Info_State                = 0 
+ Power_Limit_State               = 0 
+ Disk_Read_Top_State             = 0 
+ Disk_Write_Top_State            = 0 
  Debug_State                     =1
 
- Logs_Bottom_State               =1
+ Logs_Bottom_State               = 1
  Logs_Top_State                  =0
 
  Disk_Left_Side_State            = 0
@@ -206,17 +199,17 @@
 
 ; - #Aurora_BG_Behaviour_State# determines BG MouseOver\Leave behaviour
 
- Settings_Menu                   = 0
+ Settings_Menu                   = 1
  Aurora_BG_Behaviour_State       = 0
 
 ; - The next variables controls the menu bookmarks
 
 ; - #Settings_Close# it's about X (close) button
 
- Settings_Main                   =1
- Settings_Color                  =1
- Settings_Hardware               =1
- Settings_Behaviour              =1
+ Settings_Main                   = 1
+ Settings_Color                  = 1
+ Settings_Hardware               = 1
+ Settings_Behaviour              = 1
  Settings_Close                  = 1
 
 ; - "Temporary" variables that controls switcher between main texts and menu texts
@@ -228,7 +221,7 @@
 
 ; - #Settings_Temp_Control# controls [f.Temp_Vars_State] formula
 
- Settings_Temp_Control           =1
+ Settings_Temp_Control           = 1
 
 ; --- DEPRECATED
 
@@ -281,6 +274,8 @@
  Last_Font_Color                  =0, 240 , 215 
  Last_Value_Color                 =0, 240, 117, 255 
  Last_Warning_Color               =240, 24 , 222
+ Last_FontColor                   =0, 240 , 215, 255
+ Last_Font_Size                   =10
 
 ; --- MAIN FONTS
 
@@ -307,5 +302,12 @@
  Time_Font_Size_Secs              = 14
  Time_Font_Size_Date              = 15
  Time_Font_Size_Year              = 15
-Last_FontColor=0, 240 , 215, 255
-Last_Font_Size=10
+
+; --- CURSORS
+
+ Cursors_Set                      = #Cursors_Set_Techno#
+
+ Cursor_Slider_X                  = "#Cursors_Set#\SizeWE.ani"
+ Cursor_Slider_Y                  = "#Cursors_Set#\SizeNS.ani"
+ Cursor_Slider_XY                 = "#Cursors_Set#\SizeAll.ani"
+ Cursor_Hand                      = "#Cursors_Set#\Hand.ani"

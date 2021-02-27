@@ -1,10 +1,18 @@
 ﻿
 
-    Directory: C:\Users\Mi\AppData\Roaming\Rainmeter\Addons\AuroraBar\Update
+    Directory: C:\Users\Mi\AppData\Roaming\Rainmeter\Addons\AuroraBar
 
 
 Mode                LastWriteTime         Length Name                                                                  
 ----                -------------         ------ ----                                                                  
-d-----        2/22/2021   4:00 PM                2101                                                                  
+d-----        2/25/2021   8:13 PM                Update                                                                
+Exception calling "DownloadFile" with "2" argument(s): "The request was aborted: The connection was closed 
+unexpectedly."
+At line:3 char:2
++  $client.DownloadFile("https://github.com/deflore08/AuroraBar/release ...
++  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : WebException
+ 
 
 
