@@ -80,12 +80,12 @@
  Cursors_Set_Techno                             = techno
  Cursors_Set_Classic                            = classic
  
- Default_Cursors_Set                            = #Cursors_Set_Techno#
+ Default_Cursors_Set                            = #*Cursors_Set_Techno*#
  
- Default_Cursor_Slider_X                        = "#Cursors_Set#\SizeWE.ani"
- Default_Cursor_Slider_Y                        = "#Cursors_Set#\SizeNS.ani"
- Default_Cursor_Slider_XY                       = "#Cursors_Set#\SizeAll.ani"
- Default_Cursor_Hand                            = "#Cursors_Set#\Hand.ani"
+ Default_Cursor_Slider_X                        = "#*Cursors_Set*#\SizeWE.ani"
+ Default_Cursor_Slider_Y                        = "#*Cursors_Set*#\SizeNS.ani"
+ Default_Cursor_Slider_XY                       = "#*Cursors_Set*#\SizeAll.ani"
+ Default_Cursor_Hand                            = "#*Cursors_Set*#\Hand.ani"
 
 ; --- TOP UTILIZATIONS      
       
@@ -156,8 +156,8 @@
  Default_Cycles_3rd_Divider                     = 2
  Default_Divider_Negative_Meter                 = 0
  Default_Divider_Negative_Measure               = -1
- Default_Delay_x2                               = (#Update_Rate# * 2)
- Default_Delay_x3                               = (#Update_Rate# * 3)
+ Default_Delay_x2                               = (#*Update_Rate*# * 2)
+ Default_Delay_x3                               = (#*Update_Rate*# * 3)
  Default_DV_Main                                = 1
 
 ; - Volume
@@ -169,18 +169,18 @@
 ; - Player Positions steps      
       
  Default_Player_Position_Step                   = 5
- Default_Position_Forward                       = +#Player_Position_Step#
- Default_Position_Backward                      = -#Player_Position_Step#
+ Default_Position_Forward                       = +#*Player_Position_Step*#
+ Default_Position_Backward                      = -#*Player_Position_Step*#
       
 ; - Volume control steps      
       
  Default_Sys_Volume_Step                        = 5
- Default_Sys_Volume_Down                        = -#Sys_Volume_Step#
- Default_Sys_Volume_Up                          = +#Sys_Volume_Step#
+ Default_Sys_Volume_Down                        = -#*Sys_Volume_Step*#
+ Default_Sys_Volume_Up                          = +#*Sys_Volume_Step*#
       
  Default_Player_Volume_Step                     = 5
- Default_Player_Volume_Down                     = -#Player_Volume_Step#
- Default_Player_Volume_Up                       = +#Player_Volume_Step#
+ Default_Player_Volume_Down                     = -#*Player_Volume_Step*#
+ Default_Player_Volume_Up                       = +#*Player_Volume_Step*#
       
 ; - Applications      
       
@@ -206,7 +206,7 @@
  Default_Ping_Max                               = 100
  Default_Ping_Timeout                           = 1000
  Default_Ping_Host                              = 8.8.8.8
- Default_Ping_App_1                             = ping -t #Ping_Host#
+ Default_Ping_App_1                             = ping -t #*Ping_Host*#
       
 ; - Drives      
       
@@ -237,7 +237,7 @@
  Default_Anchor_Y                               = 50
       
  Default_Monitor_Num                            = 1
- Default_Monitor                                = @#Monitor_Num#
+ Default_Monitor                                = @#*Monitor_Num*#
  Default_Skin_Alpha                             = 255
       
  Default_Skin_Zpos                              = 0
@@ -380,9 +380,9 @@
  Default_RGB_Color                              = 124, 12 , 239
  Default_RGB_Font_Color                         = 255, 255, 255
  Default_RGB_Font_Warning_Color                 = 
- Default_Global_Color                           = #RGB_Color#, #Global_Alpha#
- Default_Bar_Color                              = #Global_Color#
- Default_Bar_BG_Color                           = #RGB_Color#, #Bar_BG_Alpha#
+ Default_Global_Color                           = #*RGB_Color*#, #*Global_Alpha*#
+ Default_Bar_Color                              = #*Global_Color*#
+ Default_Bar_BG_Color                           = #*RGB_Color*#, #*Bar_BG_Alpha*#
       
  Default_BG_Color                               = 0, 0, 0, 160
       
@@ -409,12 +409,12 @@
  Default_Last_Font_Color                        = 0, 240 , 215 
  Default_Last_Value_Color                       = 0, 240, 117, 255 
  Default_Last_Warning_Color                     = 240, 24 , 222
- Default_Last_FontColor                         = #Font_Color#
+ Default_Last_FontColor                         = #*Font_Color*#
  Default_Last_Font_Size                         = 10
 
 ; --- MAIN FONTS
 
- Default_FontColor                              = #Font_Color#
+ Default_FontColor                              = #*Font_Color*#
  Default_Font_Size                              = 10
  Default_Font_Size_Small                        = 7
  Default_Faded_Font_Size_Small                  = 7
@@ -428,9 +428,9 @@
  Default_Time_Font_Main                         = BRETTON
  Default_Time_Font_Size_Day                     = 15
  Default_Time_Font_Size_Cday                    = 15
- Default_Time_Font_Color_Main                   = #Font_Color#
- Default_Time_Font_Color_Hours                  = #Font_Color#
- Default_Time_Font_Color_Mins                   = #Font_Color#
+ Default_Time_Font_Color_Main                   = #*Font_Color*#
+ Default_Time_Font_Color_Hours                  = #*Font_Color*#
+ Default_Time_Font_Color_Mins                   = #*Font_Color*#
  Default_Time_Font_Size_Main                    = 20
  Default_Time_Font_Size_Hours                   = 40
  Default_Time_Font_Size_Mins                    = 24
@@ -665,9 +665,9 @@
  SET_DEFAULT_RGB_Color                          = [!SetVariable RGB_Color "#Default_RGB_Color#"][!WriteKeyValue Variables RGB_Color "#Default_RGB_Color#" "#@#\#Config#"]
  SET_DEFAULT_RGB_Font_Color                     = [!SetVariable RGB_Font_Color "#Default_RGB_Font_Color#"][!WriteKeyValue Variables RGB_Font_Color "#Default_RGB_Font_Color#" "#@#\#Config#"]
  SET_DEFAULT_RGB_Font_Warning_Color             = [!SetVariable RGB_Font_Warning_Color "#Default_RGB_Font_Warning_Color#"][!WriteKeyValue Variables RGB_Font_Warning_Color "#Default_RGB_Font_Warning_Color#" "#@#\#Config#"]
- SET_DEFAULT_Global_Color                       = [!SetVariable Global_Color "#*Default_Global_Color*#"][!WriteKeyValue Variables Global_Color "#*Default_Global_Color*#" "#@#\#Config#"]
- SET_DEFAULT_Bar_Color                          = [!SetVariable Bar_Color "#*Default_Bar_Color*#"][!WriteKeyValue Variables Bar_Color "#*Default_Bar_Color*#" "#@#\#Config#"]
- SET_DEFAULT_Bar_BG_Color                       = [!SetVariable Bar_BG_Color "#*Default_Bar_BG_Color*#"][!WriteKeyValue Variables Bar_BG_Color "#*Default_Bar_BG_Color*#" "#@#\#Config#"]
+ SET_DEFAULT_Global_Color                       = [!SetVariable Global_Color "#Default_Global_Color#"][!WriteKeyValue Variables Global_Color "#Default_Global_Color#" "#@#\#Config#"]
+ SET_DEFAULT_Bar_Color                          = [!SetVariable Bar_Color "#Default_Bar_Color#"][!WriteKeyValue Variables Bar_Color "#Default_Bar_Color#" "#@#\#Config#"]
+ SET_DEFAULT_Bar_BG_Color                       = [!SetVariable Bar_BG_Color "#Default_Bar_BG_Color#"][!WriteKeyValue Variables Bar_BG_Color "#Default_Bar_BG_Color#" "#@#\#Config#"]
  
  SET_DEFAULT_BG_Color                           = [!SetVariable BG_Color "#Default_BG_Color#"][!WriteKeyValue Variables BG_Color "#Default_BG_Color#" "#@#\#Config#"]
 
@@ -693,7 +693,7 @@
 
 ; --- MAIN FONTS
 
- SET_DEFAULT_FontColor                          = [!SetVariable FontColor "#*Default_FontColor*#"][!WriteKeyValue Variables Last_FontColor "#*Default_FontColor*#" "#@#\#Config#"]
+ SET_DEFAULT_FontColor                          = [!SetVariable FontColor "#Default_FontColor#"][!WriteKeyValue Variables Last_FontColor "#Default_FontColor#" "#@#\#Config#"]
  SET_DEFAULT_Font_Size                          = [!SetVariable Font_Size "#Default_Font_Size#"][!WriteKeyValue Variables Last_Font_Size "#Default_Font_Size#" "#@#\#Config#"]
  SET_DEFAULT_Font_Size_Small                    = [!SetVariable Font_Size_Small "#Default_Font_Size_Small#"][!WriteKeyValue Variables Font_Size_Small "#Default_Font_Size_Small#" "#@#\#Config#"]
  SET_DEFAULT_Faded_Font_Size_Small              = [!SetVariable Faded_Font_Size_Small "#Default_Faded_Font_Size_Small#"][!WriteKeyValue Variables Faded_Font_Size_Small "#Default_Faded_Font_Size_Small#" "#@#\#Config#"]
@@ -707,9 +707,9 @@
  SET_DEFAULT_Time_Font_Main                     = [!SetVariable Time_Font_Main "#Default_Time_Font_Main#"][!WriteKeyValue Variables Time_Font_Main "#Default_Time_Font_Main#" "#@#\#Config#"]
  SET_DEFAULT_Time_Font_Size_Day                 = [!SetVariable Time_Font_Size_Day "#Default_Time_Font_Size_Day#"][!WriteKeyValue Variables Time_Font_Size_Day "#Default_Time_Font_Size_Day#" "#@#\#Config#"]
  SET_DEFAULT_Time_Font_Size_Cday                = [!SetVariable Time_Font_Size_Cday "#Default_Time_Font_Size_Cday#"][!WriteKeyValue Variables Time_Font_Size_Cday "#Default_Time_Font_Size_Cday#" "#@#\#Config#"]
- SET_DEFAULT_Time_Font_Color_Main               = [!SetVariable Time_Font_Color_Main "#*Default_Time_Font_Color_Main*#"][!WriteKeyValue Variables Time_Font_Color_Main "#*Default_Time_Font_Color_Main*#" "#@#\#Config#"]
- SET_DEFAULT_Time_Font_Color_Hours              = [!SetVariable Time_Font_Color_Hours "#*Default_Time_Font_Color_Hours*#"][!WriteKeyValue Variables Time_Font_Color_Hours "#*Default_Time_Font_Color_Hours*#" "#@#\#Config#"]
- SET_DEFAULT_Time_Font_Color_Mins               = [!SetVariable Time_Font_Color_Mins "#*Default_Time_Font_Color_Mins*#"][!WriteKeyValue Variables Time_Font_Color_Mins "#*Default_Time_Font_Color_Mins*#" "#@#\#Config#"]
+ SET_DEFAULT_Time_Font_Color_Main               = [!SetVariable Time_Font_Color_Main "#Default_Time_Font_Color_Main#"][!WriteKeyValue Variables Time_Font_Color_Main "#Default_Time_Font_Color_Main#" "#@#\#Config#"]
+ SET_DEFAULT_Time_Font_Color_Hours              = [!SetVariable Time_Font_Color_Hours "#Default_Time_Font_Color_Hours#"][!WriteKeyValue Variables Time_Font_Color_Hours "#Default_Time_Font_Color_Hours#" "#@#\#Config#"]
+ SET_DEFAULT_Time_Font_Color_Mins               = [!SetVariable Time_Font_Color_Mins "#Default_Time_Font_Color_Mins#"][!WriteKeyValue Variables Time_Font_Color_Mins "#Default_Time_Font_Color_Mins#" "#@#\#Config#"]
  SET_DEFAULT_Time_Font_Size_Main                = [!SetVariable Time_Font_Size_Main "#Default_Time_Font_Size_Main#"][!WriteKeyValue Variables Time_Font_Size_Main "#Default_Time_Font_Size_Main#" "#@#\#Config#"]
  SET_DEFAULT_Time_Font_Size_Hours               = [!SetVariable Time_Font_Size_Hours "#Default_Time_Font_Size_Hours#"][!WriteKeyValue Variables Time_Font_Size_Hours "#Default_Time_Font_Size_Hours#" "#@#\#Config#"]
  SET_DEFAULT_Time_Font_Size_Mins                = [!SetVariable Time_Font_Size_Mins "#Default_Time_Font_Size_Mins#"][!WriteKeyValue Variables Time_Font_Size_Mins "#Default_Time_Font_Size_Mins#" "#@#\#Config#"]

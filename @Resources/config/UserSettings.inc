@@ -25,8 +25,8 @@
  Cycles_3rd_Divider               =2
  Divider_Negative_Meter           =0
  Divider_Negative_Measure         =-1
- Delay_x2                         =32
- Delay_x3                         =48
+ Delay_x2                         =(#Update_Rate# * 2)
+ Delay_x3                         =(#Update_Rate# * 3)
  DV_Main                          =1
 
 ; - Volume
@@ -70,7 +70,7 @@
  Ping_Timeout                     =1000
  Ping_Max                         =100
  Ping_Host                        =8.8.8.8
- Ping_App_1                       =ping -t 8.8.8.8
+ Ping_App_1                       =ping -t #Ping_Host#
 
 ; - Drives
 
@@ -100,8 +100,8 @@
  Anchor_X                         =0
  Anchor_Y                         =50
 
- Monitor_Num                      =4
- Monitor                          =@4
+ Monitor_Num                      =1
+ Monitor                          =@#Monitor_Num#
  Skin_Alpha                       =255
 
  Skin_Zpos                        =0
@@ -123,7 +123,7 @@
 
 ; - Default value is "110". If your taskbar is on top of screen - you may use 150 and 140 (if icons is minimized) values to keep Aurora below taskbar. 
 
- Pad_Top                         = 110
+ Pad_Top                         = 0
  Pad_X_Wings_Left                = 
  Pad_X_Wings_Right               =
 
@@ -131,44 +131,44 @@
 
 ; - #Height_State_One(1-6)# contains an unique value from 0 to 7. It needs to calculate HEIGHT mechanic (it's about TOP) in a formulas below
 
- Height_State_One                = 2
- Height_State_Two                = 3
- Height_State_Three              = 6
- Height_State_Four               = 7
- Height_State_Five               = 5
- Height_State_Six                = 4
+ Height_State_One                =0
+ Height_State_Two                =0
+ Height_State_Three              =0
+ Height_State_Four               =0
+ Height_State_Five               =0
+ Height_State_Six                =0
 
 ; - #Pad_Bottom_N# defines a Y position for elements below BG. If it's hided, it will 112px. 
 
- Pad_Bottom_VRAM_Top             = 0
- Pad_Bottom_CPU_Top              = 0
- Pad_Bottom_Throttling           = 0
- Pad_Bottom_Power_Limit          = 0
- Pad_Bottom_GPU_Top              = 0
- Pad_Bottom_Disk_Read_Top        = 0
+ Pad_Bottom_VRAM_Top             = 112
+ Pad_Bottom_CPU_Top              = 112
+ Pad_Bottom_Throttling           = 112
+ Pad_Bottom_Power_Limit          = 112
+ Pad_Bottom_GPU_Top              = 112
+ Pad_Bottom_Disk_Read_Top        = 112
  Pad_Bottom_Logs                 = 112
 
 ; --- TRIANGLE mechanics determines behaviour of 4 triangles from all sides
 
- Triangle_Top_Mechanic           = 0
- Triangle_Bottom_Mechanic        = 1
+ Triangle_Top_Mechanic           =1
+ Triangle_Bottom_Mechanic        = 0
  Triangle_Left_Mechanic          =0
  Triangle_Right_Mechanic         =0
 
 ; --- SECTIONS STATES
 
- CPU_Top_State                   = 0
- GPU_Top_State                   = 0  
- CPU_Info_State                  = 0 
- GPU_Info_State                  = 0 
- RAM_Top_State                   = 0
- VRAM_Top_State                  = 0 
- Threads_State                   = 0 
- Throttling_State                = 0 
- Clock_Info_State                = 0 
- Power_Limit_State               = 0 
- Disk_Read_Top_State             = 0 
- Disk_Write_Top_State            = 0 
+ CPU_Top_State                   =1
+ GPU_Top_State                   =1  
+ CPU_Info_State                  =1 
+ GPU_Info_State                  =1 
+ RAM_Top_State                   =1
+ VRAM_Top_State                  =1 
+ Threads_State                   =1 
+ Throttling_State                =1 
+ Clock_Info_State                =1 
+ Power_Limit_State               =1 
+ Disk_Read_Top_State             =1 
+ Disk_Write_Top_State            =1 
  Debug_State                     =1
 
  Logs_Bottom_State               =1
@@ -199,7 +199,7 @@
 
 ; - #Aurora_BG_Behaviour_State# determines BG MouseOver\Leave behaviour
 
- Settings_Menu                   = 0
+ Settings_Menu                   = 1
  Aurora_BG_Behaviour_State       = 0
 
 ; - The next variables controls the menu bookmarks
@@ -242,18 +242,18 @@
  B_Color                          = 
  A_Color                          = 
 
- RGB_Color                        = 124, 12 , 239
+ RGB_Color                        = 178, 231 , 241
  RGB_Font_Color                   =255, 255, 255
  RGB_Font_Warning_Color           = 
- Global_Color                     =#Default_Global_Color#
- Bar_Color                        =#Default_Bar_Color#
- Bar_BG_Color                     =#Default_Bar_BG_Color#
+ Global_Color                     =#RGB_Color#, #Global_Alpha#
+ Bar_Color                        =#Global_Color#
+ Bar_BG_Color                     =#RGB_Color#, #Bar_BG_Alpha#
 
  BG_Color                         =0, 0, 0, 160
 
- Font_Color                       = 0, 240 , 215, 255
- Font_Value_Color                 = 0, 240, 117, 255
- Font_Warning_Color               = 240, 24 , 222, 255 
+ Font_Color                       = 242, 210 , 203, 255
+ Font_Value_Color                 = 233, 203, 242, 255
+ Font_Warning_Color               = 215, 242 , 167, 255 
 
  Global_Alpha                     =220
  Font_Alpha                       =255
@@ -266,15 +266,15 @@
 
 ; - It needs for returning to your current scheme when mouse left out of a color buttons
 
- Last_Global_Color                = 124, 12 , 239 
+ Last_Global_Color                = 178, 231 , 241 
  Last_Bar_Color                   = 
- Last_BG_Color                    = 124, 12 , 239
+ Last_BG_Color                    = 178, 231 , 241
  Last_RGB_Color                   = 
- Last_RGB_Font_Color              = 0, 240 , 215 
- Last_Font_Color                  = 0, 240 , 215 
- Last_Value_Color                 = 0, 240, 117, 255 
- Last_Warning_Color               = 240, 24 , 222
- Last_FontColor                   =#Default_FontColor#
+ Last_RGB_Font_Color              = 242, 210 , 203 
+ Last_Font_Color                  = 242, 210 , 203 
+ Last_Value_Color                 = 233, 203, 242, 255 
+ Last_Warning_Color               = 215, 242 , 167
+ Last_FontColor                   =#Font_Color#
  Last_Font_Size                   =10
 
 ; --- MAIN FONTS
@@ -293,9 +293,9 @@
  Time_Font_Main                   =BRETTON
  Time_Font_Size_Day               =15
  Time_Font_Size_Cday              =15
- Time_Font_Color_Main             =#Default_Time_Font_Color_Main#
- Time_Font_Color_Hours            =#Default_Time_Font_Color_Hours#
- Time_Font_Color_Mins             =#Default_Time_Font_Color_Mins#
+ Time_Font_Color_Main             =#Font_Color#
+ Time_Font_Color_Hours            =#Font_Color#
+ Time_Font_Color_Mins             =#Font_Color#
  Time_Font_Size_Main              =20
  Time_Font_Size_Hours             =40
  Time_Font_Size_Mins              =24
@@ -305,15 +305,15 @@
 
 ; --- CURSORS
 
- Cursors_Set                      =techno
+ Cursors_Set                      =#Cursors_Set_Techno#
 
- Cursor_Slider_X                  =techno\SizeWE.ani
- Cursor_Slider_Y                  =techno\SizeNS.ani
- Cursor_Slider_XY                 =techno\SizeAll.ani
- Cursor_Hand                      =techno\Hand.ani
-Position_Forward=+1
-Position_Backward=-1
-Sys_Volume_Down=-1
-Sys_Volume_Up=+1
-Player_Volume_Down=-1
-Player_Volume_Up=+1
+ Cursor_Slider_X                  =#Cursors_Set#\SizeWE.ani
+ Cursor_Slider_Y                  =#Cursors_Set#\SizeNS.ani
+ Cursor_Slider_XY                 =#Cursors_Set#\SizeAll.ani
+ Cursor_Hand                      =#Cursors_Set#\Hand.ani
+Position_Forward=+#Player_Position_Step#
+Position_Backward=-#Player_Position_Step#
+Sys_Volume_Down=-#Sys_Volume_Step#
+Sys_Volume_Up=+#Sys_Volume_Step#
+Player_Volume_Down=-#Player_Volume_Step#
+Player_Volume_Up=+#Player_Volume_Step#
