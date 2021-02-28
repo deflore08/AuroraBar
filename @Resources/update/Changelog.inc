@@ -4,3 +4,6 @@
  Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
  License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
  Information                      = Service file with changelogs
+
+; Histogram's volume control mechanic changed. Now it is 1 solid rectangle
+; Minor bug fixes in settings

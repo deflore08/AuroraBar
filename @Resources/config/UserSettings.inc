@@ -39,12 +39,12 @@
 
 ; - Player Positions steps
 
- Player_Position_Step             = 1
+ Player_Position_Step             =5
 
 ; - Volume control steps
 
- Sys_Volume_Step                  = 1
- Player_Volume_Step               =1
+ Sys_Volume_Step                  =5
+ Player_Volume_Step               =5
 
 ; - Applications
 
@@ -171,7 +171,7 @@
  Disk_Write_Top_State            = 0 
  Debug_State                     =1
 
- Logs_Bottom_State               = 1
+ Logs_Bottom_State               =1
  Logs_Top_State                  =0
 
  Disk_Left_Side_State            = 0
@@ -199,7 +199,7 @@
 
 ; - #Aurora_BG_Behaviour_State# determines BG MouseOver\Leave behaviour
 
- Settings_Menu                   = 1
+ Settings_Menu                   = 0
  Aurora_BG_Behaviour_State       = 0
 
 ; - The next variables controls the menu bookmarks
@@ -242,18 +242,18 @@
  B_Color                          = 
  A_Color                          = 
 
- RGB_Color                        =124, 12 , 239
+ RGB_Color                        = 124, 12 , 239
  RGB_Font_Color                   =255, 255, 255
  RGB_Font_Warning_Color           = 
- Global_Color                     =124, 12 , 239, 220
- Bar_Color                        =124, 12 , 239, 220
- Bar_BG_Color                     =124, 12 , 239, 50
+ Global_Color                     =#Default_Global_Color#
+ Bar_Color                        =#Default_Bar_Color#
+ Bar_BG_Color                     =#Default_Bar_BG_Color#
 
  BG_Color                         =0, 0, 0, 160
 
- Font_Color                       =0, 240 , 215, 255
- Font_Value_Color                 =0, 240, 117, 255
- Font_Warning_Color               =240, 24 , 222, 255 
+ Font_Color                       = 0, 240 , 215, 255
+ Font_Value_Color                 = 0, 240, 117, 255
+ Font_Warning_Color               = 240, 24 , 222, 255 
 
  Global_Alpha                     =220
  Font_Alpha                       =255
@@ -266,15 +266,15 @@
 
 ; - It needs for returning to your current scheme when mouse left out of a color buttons
 
- Last_Global_Color                =124, 12 , 239 
+ Last_Global_Color                = 124, 12 , 239 
  Last_Bar_Color                   = 
- Last_BG_Color                    =124, 12 , 239
+ Last_BG_Color                    = 124, 12 , 239
  Last_RGB_Color                   = 
- Last_RGB_Font_Color              =0, 240 , 215 
- Last_Font_Color                  =0, 240 , 215 
- Last_Value_Color                 =0, 240, 117, 255 
- Last_Warning_Color               =240, 24 , 222
- Last_FontColor                   =0, 240 , 215, 255
+ Last_RGB_Font_Color              = 0, 240 , 215 
+ Last_Font_Color                  = 0, 240 , 215 
+ Last_Value_Color                 = 0, 240, 117, 255 
+ Last_Warning_Color               = 240, 24 , 222
+ Last_FontColor                   =#Default_FontColor#
  Last_Font_Size                   =10
 
 ; --- MAIN FONTS
@@ -293,9 +293,9 @@
  Time_Font_Main                   =BRETTON
  Time_Font_Size_Day               =15
  Time_Font_Size_Cday              =15
- Time_Font_Color_Main             =0, 240 , 215, 255
- Time_Font_Color_Hours            =0, 240 , 215, 255
- Time_Font_Color_Mins             =0, 240 , 215, 255
+ Time_Font_Color_Main             =#Default_Time_Font_Color_Main#
+ Time_Font_Color_Hours            =#Default_Time_Font_Color_Hours#
+ Time_Font_Color_Mins             =#Default_Time_Font_Color_Mins#
  Time_Font_Size_Main              =20
  Time_Font_Size_Hours             =40
  Time_Font_Size_Mins              =24
@@ -305,9 +305,15 @@
 
 ; --- CURSORS
 
- Cursors_Set                      = #Cursors_Set_Techno#
+ Cursors_Set                      =techno
 
- Cursor_Slider_X                  = "#Cursors_Set#\SizeWE.ani"
- Cursor_Slider_Y                  = "#Cursors_Set#\SizeNS.ani"
- Cursor_Slider_XY                 = "#Cursors_Set#\SizeAll.ani"
- Cursor_Hand                      = "#Cursors_Set#\Hand.ani"
+ Cursor_Slider_X                  =techno\SizeWE.ani
+ Cursor_Slider_Y                  =techno\SizeNS.ani
+ Cursor_Slider_XY                 =techno\SizeAll.ani
+ Cursor_Hand                      =techno\Hand.ani
+Position_Forward=+1
+Position_Backward=-1
+Sys_Volume_Down=-1
+Sys_Volume_Up=+1
+Player_Volume_Down=-1
+Player_Volume_Up=+1
