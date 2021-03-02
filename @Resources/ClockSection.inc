@@ -1,8 +1,8 @@
 ﻿[Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.5b
+ Version                          = 2.1.6b
  Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
- License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
+ License                          = Creative Commons Attribution-Non-Commercial-Share Alike 4.0
  Information                      = Clock, weather, volume, mid section
 
 [Variables]
@@ -193,6 +193,20 @@
 ; - MEASURES END
 
  ; --- TEXTS BEGINNING
+
+[updater.NOTIFICATION]
+ Meter                            = STRING
+ MeterStyle                       = style.text.Simple_Font_Center_Align
+ X                                = 955
+ Y                                = (#Pad_Top# + 45)
+ Text                             = "Version #New_Version# Available"
+ FontColor                        = #Font_Warning_Color#
+ StringCase                       = Upper
+ AntiAlias                        = 1
+ DynamicVariables                 = 1
+ Group                            = #clock_and_date# | #updater#
+ Hidden                           = 1
+ LeftMouseUpAction                = [!Log "Update requested.."][!SetVariable Update_Initialized "1"][!WriteKeyValue Variables Update_Initialized "1" "#Service_Folder#\Service.inc"][!SetVariable Update_Completed "0"][!WriteKeyValue Variables Update_Completed "0" "#Service_Folder#\Service.inc"][!UpdateMeasure sensor.UPDATE_CONTROLLER]
 
 [text.dynamic.TIME_HOURS]
  MeasureName                      = sensor.TIME_HOURS

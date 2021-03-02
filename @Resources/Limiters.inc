@@ -1,8 +1,8 @@
 [Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.5b
+ Version                          = 2.1.6b
  Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
- License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
+ License                          = Creative Commons Attribution-Non-Commercial-Share Alike 4.0
  Information                      = Limiters info, such as thermal throttling and power limits.
 
 ; --- MEASURES
@@ -15,9 +15,9 @@
  DynamicVariables                 = 1
  Group                            = #throttling# | #limiters# | #limiters_sensors# | #sensors#
 
-     onChangeAction               = [!UpdateMeter text.dynamic.THROTTLING_COMMON_VALUE]
+     onChangeAction               = [!UpdateMeter text.dynamic.THROTTLING_COMMON_VALUE][!UpdateMeter text.dynamic.THROTTLING_CPU_VALUE][!UpdateMeter text.dynamic.THROTTLING_GPU_VALUE][!Redraw]
      ifCondition                  = formula.THROTTHLING = 0
-          ifTrueAction            = [!SetOption text.dynamic.THROTTLING_COMMON_VALUE Text "NO"][!SetOption text.dynamic.THROTTLING_COMMON_VALUE FontColor "#Font_Value_Color#"]
+          ifTrueAction            = [!SetOption text.dynamic.THROTTLING_COMMON_VALUE Text "NO"][!SetOption text.dynamic.THROTTLING_COMMON_VALUE FontColor "#Font_Value_Color#"][!SetOption text.dynamic.THROTTLING_CPU_VALUE Text "NO"][!SetOption text.dynamic.THROTTLING_CPU_VALUE FontColor "#Font_Value_Color#"][!SetOption text.dynamic.THROTTLING_GPU_VALUE Text "NO"][!SetOption text.dynamic.THROTTLING_GPU_VALUE FontColor "#Font_Value_Color#"]
                ifFalseAction      = [!SetOption text.dynamic.THROTTLING_COMMON_VALUE Text "YES"][!SetOption text.dynamic.THROTTLING_COMMON_VALUE FontColor "#Font_Warning_Color#"]
           ifConditionMode         = 1
 
@@ -32,6 +32,7 @@
  DynamicVariables                 = 1
  Group                            = #throttling# | #limiters#  | #limiters_sensors# | #sensors#
 
+     onChangeAction               = [!UpdateMeter text.dynamic.THROTTLING_COMMON_VALUE][!UpdateMeter text.dynamic.THROTTLING_CPU_VALUE][!Redraw]
      ifCondition                  = sensor.THROTTLING_CPU = 0
           ifTrueAction            = [!SetOption text.dynamic.THROTTLING_CPU_VALUE Text "NO"][!SetOption text.dynamic.THROTTLING_CPU_VALUE FontColor "#Font_Value_Color#"]
                ifFalseAction      = [!SetOption text.dynamic.THROTTLING_CPU_VALUE Text "YES"][!SetOption text.dynamic.THROTTLING_CPU_VALUE FontColor "#Font_Warning_Color#"]
@@ -48,7 +49,7 @@
  DynamicVariables                 = 1
  Group                            = #throttling# | #limiters#  | #limiters_sensors# | #sensors#
 
-     onChangeAction               = [!UpdateMeter text.dynamic.THROTTLING_GPU_VALUE]
+     onChangeAction               = [!UpdateMeter text.dynamic.THROTTLING_COMMON_VALUE][!UpdateMeter text.dynamic.THROTTLING_GPU_VALUE][!Redraw]
      ifCondition                  = sensor.THROTTLING_GPU < 2
           ifTrueAction            = [!SetOption text.dynamic.THROTTLING_GPU_VALUE Text "NO"][!SetOption text.dynamic.THROTTLING_GPU_VALUE FontColor "#Font_Value_Color#"]
                ifFalseAction      = [!SetOption text.dynamic.THROTTLING_GPU_VALUE Text "YES"][!SetOption text.dynamic.THROTTLING_GPU_VALUE FontColor "#Font_Warning_Color#"]
@@ -62,9 +63,9 @@
  DynamicVariables                 = 1
  Group                            = #power_limit# | #limiters#  | #limiters_sensors# | #sensors#
 
-     onChangeAction               = [!UpdateMeter text.dynamic.POWER_LIMIT_VALUE]
+     onChangeAction               = [!UpdateMeter text.dynamic.POWER_LIMIT_VALUE][!UpdateMeter text.dynamic.POWER_LIMIT_CPU_VALUE][!UpdateMeter text.dynamic.POWER_LIMIT_GPU_VALUE][!Redraw]
      ifCondition                  = formula.POWER_LIMIT = 0
-          ifTrueAction            = [!SetOption text.dynamic.POWER_LIMIT_VALUE Text "NO"][!SetOption text.dynamic.POWER_LIMIT_VALUE FontColor "#Font_Value_Color#"]
+          ifTrueAction            = [!SetOption text.dynamic.POWER_LIMIT_VALUE Text "NO"][!SetOption text.dynamic.POWER_LIMIT_VALUE FontColor "#Font_Value_Color#"][!SetOption text.dynamic.POWER_LIMIT_CPU_VALUE Text "NO"][!SetOption text.dynamic.POWER_LIMIT_CPU_VALUE FontColor "#Font_Value_Color#"][!SetOption text.dynamic.POWER_LIMIT_GPU_VALUE Text "NO"][!SetOption text.dynamic.POWER_LIMIT_GPU_VALUE FontColor "#Font_Value_Color#"]
                ifFalseAction      = [!SetOption text.dynamic.POWER_LIMIT_VALUE Text "YES"][!SetOption text.dynamic.POWER_LIMIT_VALUE FontColor "#Font_Warning_Color#"]
           ifConditionMode         = 1
 
@@ -79,7 +80,7 @@
  DynamicVariables                 = 1
  Group                            = #power_limit# | #limiters#  | #limiters_sensors# | #sensors#
 
-     onChangeAction               = [!UpdateMeter text.dynamic.POWER_LIMIT_CPU_VALUE]
+     onChangeAction               = [!UpdateMeter text.dynamic.POWER_LIMIT_VALUE][!UpdateMeter text.dynamic.POWER_LIMIT_CPU_VALUE][!Redraw]
      ifCondition                  = sensor.POWER_LIMIT_CPU = 0
           ifTrueAction            = [!SetOption text.dynamic.POWER_LIMIT_CPU_VALUE Text "NO"][!SetOption text.dynamic.POWER_LIMIT_CPU_VALUE FontColor "#Font_Value_Color#"]
                ifFalseAction      = [!SetOption text.dynamic.POWER_LIMIT_CPU_VALUE Text "YES"][!SetOption text.dynamic.POWER_LIMIT_CPU_VALUE FontColor "#Font_Warning_Color#"]
@@ -96,7 +97,7 @@
  DynamicVariables                 = 1
  Group                            = #power_limit# | #limiters#  | #limiters_sensors# | #sensors#
 
-     onChangeAction               = [!UpdateMeter text.dynamic.POWER_LIMIT_GPU_VALUE]
+     onChangeAction               = [!UpdateMeter text.dynamic.POWER_LIMIT_VALUE][!UpdateMeter text.dynamic.POWER_LIMIT_GPU_VALUE][!Redraw]
      ifCondition                  = sensor.POWER_LIMIT_GPU = 0
           ifTrueAction            = [!SetOption text.dynamic.POWER_LIMIT_GPU_VALUE Text "NO"][!SetOption text.dynamic.POWER_LIMIT_GPU_VALUE FontColor "#Font_Value_Color#"]
                ifFalseAction      = [!SetOption text.dynamic.POWER_LIMIT_GPU_VALUE Text "YES"][!SetOption text.dynamic.POWER_LIMIT_GPU_VALUE FontColor "#Font_Warning_Color#"]

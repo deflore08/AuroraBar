@@ -1,15 +1,16 @@
 [Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.5b
+ Version                          = 2.1.6b
  Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
- License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
+ License                          = Creative Commons Attribution-Non-Commercial-Share Alike 4.0
  Information                      = Updater module
 
 [Variables]
- Version                           = 2.1.5b
- Build                             = 2151
+ Version                           = 2.1.6b
+ Build                             = 2161
  New_Build                         = [m.Updater_Parser_Check_Build]
  New_Version                       = [m.Updater_Parser_Check_Version]
+ Update_Available                  = 0
  Download_URL                      = https://github.com/deflore08/AuroraBar/releases/download/#New_Version#/AuroraBar_#New_Version#.rmskin
  Reset_Update_State                = [!SetVariable Update_Initialized "1"][!WriteKeyValue Variables Update_Initialized "0" "#Service_Folder#\Service.inc"][!SetVariable Update_Download_Completed "0"][!WriteKeyValue Variables Update_Download_Completed "0" "#Service_Folder#\Service.inc"][!SetVariable Update_Ready_To_Install "0"][!WriteKeyValue Variables Update_Ready_To_Install "0" "#Service_Folder#\Service.inc"][!SetVariable Backup_Config_Completed "0"][!WriteKeyValue Variables Backup_Config_Completed "0" "#Service_Folder#\Service.inc"][!SetVariable Backup_Hotkeys_Completed "0"][!WriteKeyValue Variables Backup_Hotkeys_Completed "0" "#Service_Folder#\Service.inc"][!SetVariable Backup_Hardware_Completed "0"][!WriteKeyValue Variables Backup_Hardware_Completed "0" "#Service_Folder#\Service.inc"][!SetVariable Restore_Config_Completed "0"][!WriteKeyValue Variables Restore_Config_Completed "0" "#Service_Folder#\Service.inc"][!SetVariable Restore_Hotkeys_Completed "0"][!WriteKeyValue Variables Restore_Hotkeys_Completed "0" "#Service_Folder#\Service.inc"][!SetVariable Restore_Hardware_Completed "0"][!WriteKeyValue Variables Restore_Hardware_Completed "0" "#Service_Folder#\Service.inc"][!SetVariable Update_Completed "1"][!WriteKeyValue Variables Update_Completed "1" "#Service_Folder#\Service.inc"][!SetVariable Installation_Initialized "0"][!WriteKeyValue Variables Installation_Initialized "0" "#Service_Folder#\Service.inc"][!Log "Update state reseted"][!Delay 300][!Refresh]
 
@@ -35,11 +36,11 @@
  DynamicVariables                 = 1
  Group                            = #updater#
      ifCondition                  = m.Updater_Parser_Check_Build > #Build#
-          ifTrueAction            = [!SetOption text.Main_Check_Version Text "AVAILABLE"][!SetOption text.Main_Check_Version FontColor "#*Font_Warning_Color*#"][!SetOption text.Main_Check_Version_Value FontColor "#*Font_Warning_Color*#"]
+          ifTrueAction            = [!SetOption text.Main_Check_Version Text "AVAILABLE"][!SetOption text.Main_Check_Version FontColor "#*Font_Warning_Color*#"][!SetOption text.Main_Check_Version_Value FontColor "#*Font_Warning_Color*#"][!SetVariable Update_Available "1"]
      ifCondition2                 = m.Updater_Parser_Check_Build = #Build#
-          ifTrueAction2           = [!SetOption text.Main_Check_Version Text "UP TO DATE"][!SetOption text.Main_Check_Version_Value FontColor "#*Font_Value_Color*#"][!SetOption text.Main_Check_Version FontColor "#*Font_Color*#"]
+          ifTrueAction2           = [!SetOption text.Main_Check_Version Text "UP TO DATE"][!SetOption text.Main_Check_Version_Value FontColor "#*Font_Value_Color*#"][!SetOption text.Main_Check_Version FontColor "#*Font_Color*#"][!SetVariable Update_Available "0"]
      ifCondition3                 = m.Updater_Parser_Check_Build < #Build#
-          ifTrueAction3           = [!SetOption text.Main_Check_Version Text "CUSTOM"][!SetOption text.Main_Check_Version_Value FontColor "#*Font_Warning_Color*#"][!SetOption text.Main_Check_Version FontColor "#*Font_Warning_Color*#"]
+          ifTrueAction3           = [!SetOption text.Main_Check_Version Text "CUSTOM"][!SetOption text.Main_Check_Version_Value FontColor "#*Font_Warning_Color*#"][!SetOption text.Main_Check_Version FontColor "#*Font_Warning_Color*#"][!SetVariable Update_Available "0"]
      ifConditionMode              = 1
 
 [m.Updater_Downloader]
@@ -247,7 +248,7 @@
  DynamicVariables                 = 1
  OutputType                       = UTF8
  OutputFile                       = #Log_Installer#
- FinishAction                     = [!CommandMeasure m.UPDATER_CHECK_INSTALL "Run"][!Delay 1000][!SetVariable Previous_Version "#Version#"][!WriteKeyValue Variables Previous_Version "#Version#" "#Service_Folder#\Service.inc"][!SetVariable Previous_Build "#Build#"][!WriteKeyValue Variables Previous_Build "#Build#" "#Service_Folder#\Service.inc"][!SetVariable Update_Flag "0"][!WriteKeyValue Variables Update_Flag " 0" "#Service_Folder#\Service.inc"][!Log "[INSTALLATION] A new installation detected. Errors below it's fine, do not pay attention. Service directories has been created. Skin will be refreshed now."][!Delay 1000][!Refresh]
+ FinishAction                     = [!CommandMeasure m.UPDATER_CHECK_INSTALL "Run"][!Delay 1000][!SetVariable Previous_Version "#Version#"][!WriteKeyValue Variables Previous_Version "#Version#" "#Service_Folder#\Service.inc"][!SetVariable Previous_Build "#Build#"][!WriteKeyValue Variables Previous_Build "#Build#" "#Service_Folder#\Service.inc"][!SetVariable Update_Flag "0"][!WriteKeyValue Variables Update_Flag " 0" "#Service_Folder#\Service.inc"][!Log "[INSTALLATION] A new installation detected. Errors below it's fine, do not pay attention. Service directories has been created. Skin will be refreshed now."][!EnableMeasure m.Install_Flag][!UpdateMeasure m.Install_Flag][!Delay 2000][!Refresh]
  Hidden                           = 1
 
 ; --- CONTROLLER
@@ -276,14 +277,14 @@
           ifTrueAction6           = [!Log "[UPDATE] Update applied. Trying to restore configuration.."][!CommandMeasure shell.RESTORE_CONFIG "Run"]
 
      ifCondition7                 = (#Update_Initialized# = 1) && (#Update_Completed# = 0) && (#Update_Download_Completed# = 1) && (#Update_Ready_To_Install# = 1) && (#Backup_Config_Completed# = 1) && (#Backup_Hotkeys_Completed# = 1) && (#Backup_Hardware_Completed# = 1) && (#Installation_Initialized# = 1) && (#Restore_Config_Completed# = 1) && (#Restore_Hotkeys_Completed# = 1) && (#Restore_Hardware_Completed# = 1) && (#Current_Build# = #Build#)
-          ifTrueAction7           = [!Log "[UPDATE] Configuration restored! Finishing the update operation.."][!SetVariable Update_Completed "1"][!WriteKeyValue Variables Update_Completed "1" "#Service_Folder#\Service.inc"]
+          ifTrueAction7           = [!Log "[UPDATE] Configuration restored! Finishing the update operation.."][!SetVariable Update_Completed "1"][!WriteKeyValue Variables Update_Completed "1" "#Service_Folder#\Service.inc"][!EnableMeasure updater.NEW_VARIABLES][!UpdateMeasure updater.NEW_VARIABLES][!DisableMeasure udpater.NEW_VARIABLES][!EnableMeasure udpater.OLD_VARIABLES][!UpdateMeasure updater.OLD_VARIABLES][!DisableMeasure updater.OLD_VARIABLES]
      
      ifCondition8                 = (#Update_Initialized# = 1) && (#Update_Completed# = 1) && (#Update_Download_Completed# = 1) && (#Update_Ready_To_Install# = 1) && (#Backup_Config_Completed# = 1) && (#Backup_Hotkeys_Completed# = 1) && (#Backup_Hardware_Completed# = 1) && (#Installation_Initialized# = 1) && (#Restore_Config_Completed# = 1) && (#Restore_Hotkeys_Completed# = 1) && (#Restore_Hardware_Completed# = 1) && (#Current_Build# = #Build#)
           ifTrueAction8           = [!Log "[UPDATE] Update succesfully completed! The new version is [AuroraBar #Version# Build #Build#]. Enjoy!"][!SetVariable Update_Initialized "1"][!WriteKeyValue Variables Update_Initialized "0" "#Service_Folder#\Service.inc"][!SetVariable Update_Download_Completed "0"][!WriteKeyValue Variables Update_Download_Completed "0" "#Service_Folder#\Service.inc"][!SetVariable Update_Ready_To_Install "0"][!WriteKeyValue Variables Update_Ready_To_Install "0" "#Service_Folder#\Service.inc"][!SetVariable Backup_Config_Completed "0"][!WriteKeyValue Variables Backup_Config_Completed "0" "#Service_Folder#\Service.inc"][!SetVariable Backup_Hotkeys_Completed "0"][!WriteKeyValue Variables Backup_Hotkeys_Completed "0" "#Service_Folder#\Service.inc"][!SetVariable Backup_Hardware_Completed "0"][!WriteKeyValue Variables Backup_Hardware_Completed "0" "#Service_Folder#\Service.inc"][!SetVariable Restore_Config_Completed "0"][!WriteKeyValue Variables Restore_Config_Completed "0" "#Service_Folder#\Service.inc"][!SetVariable Restore_Hotkeys_Completed "0"][!WriteKeyValue Variables Restore_Hotkeys_Completed "0" "#Service_Folder#\Service.inc"][!SetVariable Restore_Hardware_Completed "0"][!WriteKeyValue Variables Restore_Hardware_Completed "0" "#Service_Folder#\Service.inc"][!SetVariable Installation_Initialized "0"][!WriteKeyValue Variables Installation_Initialized "0" "#Service_Folder#\Service.inc"][!Delay 300][!Refresh]
 
      ifConditionMode              = 1
  
-[m.Install_Flagger]
+[m.Install_Flag]
  Measure                          = WebParser
  URL                              = http://aurorabar.daid-art.online/services/install_flag.php
  UserAgent                        = AuroraBar
@@ -296,11 +297,17 @@
  DynamicVariables                 = 1
  Group                            = #updater#
 
-[updater.VARIABLES_MODULE]
+[updater.NEW_VARIABLES]
  Measure                          = CALC
  DynamicVariables                 = 1
  Disabled                         = 1
-     onUpdateAction               = [!SetVariable NEW_VAR "#DEFAULT_NEW_VAR#"][!WriteKeyValue NEW_VAR "#DEFAULT_NEW_VAR#" "#@#\#Config#"][!SetVariable OLD_VAR "#DEFAULT_OLD_VAR#"][!WriteKeyValue OLD_VAR "#DEFAULT_OLD_VAR#" "#@#\#Config#"]
+     onUpdateAction               = [!WriteKeyValue Variables Cursors_Set "#Default_Cursors_Set#"]
+
+[updater.OLD_VARIABLES]
+ Measure                          = CALC
+ DynamicVariables                 = 1
+ Disabled                         = 1
+     onUpdateAction               = [!WriteKeyValue Variables Sys_Volume_Down "DEPRECATED" "#@#\#Config#"][!WriteKeyValue Variables Sys_Volume_Up "DEPRECATED" "#@#\#Config#"][!WriteKeyValue Variables Player_Volume_Down "DEPRECATED" "#@#\#Config#"][!WriteKeyValue Variables Player_Volume_Up "DEPRECATED" "#@#\#Config#"][!WriteKeyValue Variables Position_Forward "DEPRECATED" "#@#\#Config#"][!WriteKeyValue Variables Position_Backward "DEPRECATED" "#@#\#Config#"]
 
 [text.Updater_Text123]
  Meter                            = STRING
@@ -326,7 +333,7 @@
  Y                                = (#Pad_Top# + 135)
  DynamicVariables                 = 1
 ; LeftMouseUpAction                = [!CommandMeasure test.LUA_LOGGER "writeToFile()"]
- LeftMouseUpAction                = [!EnableMeasure m.Install_Flagger][!UpdateMeasure m.Install_Flagger]
+ LeftMouseUpAction                = [!EnableMeasure m.Install_Flag][!UpdateMeasure m.Install_Flag]
  RightMouseUpAction               = #Reset_Update_State#
  Hidden                           = 1
  Group                            = #updater#
@@ -340,3 +347,18 @@
  LeftMouseUpAction                = [!CommandMeasure m.Updater_Skin_Installer "Run"]
  Hidden                           = 1
  Group                            = #updater#
+
+[updater.NOTIFICATION_CONTROLLER]
+ Measure                          = CALC
+ DynamicVariables                 = 1
+ Group                            = #updater#
+     ifCondition                  = (#Clock_And_Date_State# = 0) && (#Update_Available# = 1)
+          ifTrueAction            = [!ShowMeter updater.NOTIFICATION]
+
+     ifCondition2                 = (#Clock_And_Date_State# = 0) && (#Update_Available# = 0)
+          ifTrueAction2           = [!HideMeter updater.NOTIFICATION]
+
+     ifCondition3                 = (#Clock_And_Date_State# = 1) && (#Update_Available# = 1)
+          ifTrueAction3           = [!HideMeter updater.NOTIFICATION]
+
+     ifConditionMode              = 1

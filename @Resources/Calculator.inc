@@ -1,8 +1,8 @@
 [Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.5b
+ Version                          = 2.1.6b
  Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
- License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
+ License                          = Creative Commons Attribution-Non-Commercial-Share Alike 4.0
  Information                      = Calculator module. Thanks to TGonZo for this.
 
 [Variables]
@@ -19,6 +19,7 @@
  DynamicVariables                 = 1
  RegExpSubstitute                 = 1
  Substitute                       = "^07":"7"
+ Group                            = #calculator#
 
 [m.Number_8]
  Measure                          = String
@@ -26,6 +27,7 @@
  DynamicVariables                 = 1
  RegExpSubstitute                 = 1
  Substitute                       = "^08":"8"
+ Group                            = #calculator#
 
 [m.Number_9]
  Measure                          = String
@@ -33,6 +35,7 @@
  DynamicVariables                 = 1
  RegExpSubstitute                 = 1
  Substitute                       = "^09":"9"
+ Group                            = #calculator#
 
 [m.Number_4]
  Measure                          = String
@@ -40,6 +43,7 @@
  DynamicVariables                 = 1
  RegExpSubstitute                 = 1
  Substitute                       = "^04":"4"
+ Group                            = #calculator#
 
 [m.Number_5]
  Measure                          = String
@@ -47,6 +51,7 @@
  DynamicVariables                 = 1
  RegExpSubstitute                 = 1
  Substitute                       = "^05":"5"
+ Group                            = #calculator#
 
 [m.Number_6]
  Measure                          = String
@@ -54,6 +59,7 @@
  DynamicVariables                 = 1
  RegExpSubstitute                 = 1
  Substitute                       = "^06":"6"
+ Group                            = #calculator#
 
 [m.Number_1]
  Measure                          = String
@@ -61,6 +67,7 @@
  DynamicVariables                 = 1
  RegExpSubstitute                 = 1
  Substitute                       = "^01":"1"
+ Group                            = #calculator#
 
 [m.Number_2]
  Measure                          = String
@@ -68,6 +75,7 @@
  DynamicVariables                 = 1
  RegExpSubstitute                 = 1
  Substitute                       = "^02":"2"
+ Group                            = #calculator#
 
 [m.Number_3]
  Measure                          = String
@@ -75,6 +83,7 @@
  DynamicVariables                 = 1
  RegExpSubstitute                 = 1
  Substitute                       = "^03":"3"
+ Group                            = #calculator#
 
 [m.Number_0]
  Measure                          = String
@@ -82,6 +91,7 @@
  DynamicVariables                 = 1
  RegExpSubstitute                 = 1
  Substitute                       = "^00":"0"
+ Group                            = #calculator#
 
 [m.Operator_DOT]
  Measure                          = String
@@ -89,32 +99,38 @@
  DynamicVariables                 = 1
  RegExpSubstitute                 = 1
  Substitute                       = "(.*\..*)(\.)":"\1"
+ Group                            = #calculator#
 
 [m.Operator_=]
  Measure                          = CALC
  Formula                          = "#Calc_Formula#"
  DynamicVariables                 = 1
+ Group                            = #calculator#
 
 
 [m.Operator_+]
  Measure                          = String
  String                           = "#Display_Result#+"
  DynamicVariables                 = 1
+ Group                            = #calculator#
 
 [m.Operator_-]
  Measure                          = String
  String                           = "#Display_Result#-"
  DynamicVariables                 = 1
+ Group                            = #calculator#
 
 [m.Operator_*]
  Measure                          = String
  String                           = "#Display_Result#*"
  DynamicVariables                 = 1
+ Group                            = #calculator#
 
 [m.Operator_/]
  Measure                          = String
  String                           = "#Display_Result#/"
  DynamicVariables                 = 1
+ Group                            = #calculator#
 
 [m.Operator_+/-]
  Measure                          = String
@@ -122,18 +138,20 @@
  DynamicVariables                 = 1
  RegExpSubstitute                 = 1
  Substitute                       = "(^--)":""
+ Group                            = #calculator#
 
 [m.Operator_%]
  Measure                          = CALC
  Formula                          = "#Display_Result#/100"
  DynamicVariables                 = 1
+ Group                            = #calculator#
 
 [m.Operator_AC]
  Measure                          = String
  String                           = no
  IfMatch                          = "yes"
  IfMatchAction                    = [!SetVariable Display_Result "0"][!SetOption m.Operator_AC String "no"][!UpdateMeasure m.Operator_AC]
-;;UpdateDivider                    = #Divider_Negative_Measure#
+ Group                            = #calculator#
 
 ;-------------TEXTS---------------
 
@@ -419,7 +437,7 @@
  MyPath                           = 0, 0 | LineTo 30, 0 | LineTo 48, 18 | LineTo 18, 18 | LineTo 0, 0
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
- LeftMouseUpAction                = [!SetVariable Calc_Formula "#Calc_Formula##Display_Result#/"][!SetOption m.Operator_AC String "yes"][!SetVariable Display_Between "#Display_Between#/"][!Update][!Redraw]
+ LeftMouseUpAction                = [!SetVariable Calc_Formula "#Calc_Formula##Display_Result#/"][!SetOption m.Operator_AC String "yes"][!SetVariable Display_Between "#Display_Between#/"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
  DynamicVariables                 = 1
 
 [shape.Operator_%]
@@ -431,7 +449,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!SetVariable Display_Result [m.Operator_%]][!SetVariable Display_Between "#Display_Between#%"][!Update][!Redraw]
+ LeftMouseUpAction                = [!SetVariable Display_Result "[m.Operator_%]"][!SetVariable Display_Between "#Display_Between#%"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Operator_+/-]
  Meter                            = SHAPE
@@ -442,7 +460,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!SetVariable Display_Result [m.Operator_+/-]][!Update][!Redraw]
+ LeftMouseUpAction                = [!SetVariable Display_Result [m.Operator_+/-]][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Operator_AC]
  Meter                            = SHAPE
@@ -453,7 +471,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!SetVariable Calc_CMD ""][!SetVariable Display_Result "0"][!SetVariable Display_Between ""][!SetVariable Calc_Formula ""][!Update][!Redraw]
+ LeftMouseUpAction                = [!SetVariable Calc_CMD ""][!SetVariable Display_Result "0"][!SetVariable Display_Between ""][!SetVariable Calc_Formula ""][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Operator_*]
  Meter                            = SHAPE
@@ -464,7 +482,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!SetVariable Calc_Formula "#Calc_Formula##Display_Result#*"][!SetVariable Display_Between "#Display_Between#*"][!SetOption m.Operator_AC String "yes"][!Update][!Redraw]
+ LeftMouseUpAction                = [!SetVariable Calc_Formula "#Calc_Formula##Display_Result#*"][!SetVariable Display_Between "#Display_Between#*"][!SetOption m.Operator_AC String "yes"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Number_7]
  Meter                            = SHAPE
@@ -475,7 +493,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!Update][!SetVariable Display_Result [m.Number_7]][!SetVariable Display_Between "#Display_Between#7"][!Update][!Redraw]
+ LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!SetVariable Display_Result [m.Number_7]][!SetVariable Display_Between "#Display_Between#7"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Number_8]
  Meter                            = SHAPE
@@ -486,7 +504,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!Update][!SetVariable Display_Result [m.Number_8]][!SetVariable Display_Between "#Display_Between#8"][!Update][!Redraw]
+ LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!SetVariable Display_Result [m.Number_8]][!SetVariable Display_Between "#Display_Between#8"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Number_9]
  Meter                            = SHAPE
@@ -497,7 +515,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!Update][!SetVariable Display_Result [m.Number_9]][!SetVariable Display_Between "#Display_Between#9"][!Update][!Redraw]
+ LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!SetVariable Display_Result [m.Number_9]][!SetVariable Display_Between "#Display_Between#9"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 ;[shape.Operator_-]
 ; Meter                            = SHAPE
@@ -516,7 +534,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!Update][!SetVariable Display_Result [m.Number_4]][!SetVariable Display_Between "#Display_Between#4"][!Update][!Redraw]
+ LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!SetVariable Display_Result [m.Number_4]][!SetVariable Display_Between "#Display_Between#4"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Number_5]
  Meter                            = SHAPE
@@ -527,7 +545,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!Update][!SetVariable Display_Result [m.Number_5]][!SetVariable Display_Between "#Display_Between#5"][!Update][!Redraw]
+ LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!SetVariable Display_Result [m.Number_5]][!SetVariable Display_Between "#Display_Between#5"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Number_6]
  Meter                            = SHAPE
@@ -538,7 +556,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!Update][!SetVariable Display_Result [m.Number_6]][!SetVariable Display_Between "#Display_Between#6"][!Update][!Redraw]
+ LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!SetVariable Display_Result [m.Number_6]][!SetVariable Display_Between "#Display_Between#6"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Operator_+]
  Meter                            = SHAPE
@@ -549,7 +567,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!SetVariable Calc_Formula "#Calc_Formula##Display_Result#+"][!SetOption m.Operator_AC String "yes"][!SetVariable Display_Between "#Display_Between#+"][!Update][!Redraw]
+ LeftMouseUpAction                = [!SetVariable Calc_Formula "#Calc_Formula##Display_Result#+"][!SetOption m.Operator_AC String "yes"][!SetVariable Display_Between "#Display_Between#+"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Number_1]
  Meter                            = SHAPE
@@ -560,7 +578,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!Update][!SetVariable Display_Result [m.Number_1]][!SetVariable Display_Between "#Display_Between#1"][!Update][!Redraw]
+ LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!SetVariable Display_Result [m.Number_1]][!SetVariable Display_Between "#Display_Between#1"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Number_2]
  Meter                            = SHAPE
@@ -571,7 +589,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!Update][!SetVariable Display_Result [m.Number_2]][!SetVariable Display_Between "#Display_Between#2"][!Update][!Redraw]
+ LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!SetVariable Display_Result [m.Number_2]][!SetVariable Display_Between "#Display_Between#2"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Number_3]
  Meter                            = SHAPE
@@ -582,7 +600,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!Update][!SetVariable Display_Result [m.Number_3]][!SetVariable Display_Between "#Display_Between#3"][!Update][!Redraw]
+ LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!SetVariable Display_Result [m.Number_3]][!SetVariable Display_Between "#Display_Between#3"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Operator_-]
  Meter                            = SHAPE
@@ -593,7 +611,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!SetVariable Calc_Formula "#Calc_Formula##Display_Result#-"][!SetOption m.Operator_AC String "yes"][!SetVariable Display_Between "#Display_Between#-"][!Update][!Redraw]
+ LeftMouseUpAction                = [!SetVariable Calc_Formula "#Calc_Formula##Display_Result#-"][!SetOption m.Operator_AC String "yes"][!SetVariable Display_Between "#Display_Between#-"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Operator_=]
  Meter                            = SHAPE
@@ -605,7 +623,7 @@
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!SetVariable Calc_Formula "#Calc_Formula##Display_Result#"][!update][!SetVariable Display_Result [m.Operator_=]][!SetVariable Calc_CMD ""][!SetVariable Calc_Formula ""][!SetOption m.Operator_AC String "yes"][!Update][!Redraw]
+ LeftMouseUpAction                = [!SetVariable Calc_Formula "#Calc_Formula##Display_Result#"][!SetVariable Display_Result [m.Operator_=]][!SetVariable Calc_CMD ""][!SetVariable Calc_Formula ""][!SetOption m.Operator_AC String "yes"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Operator_DOT]
  Meter                            = SHAPE
@@ -616,7 +634,7 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!Update][!SetVariable Display_Result [m.Operator_DOT]][!SetVariable Display_Between "#Display_Between#."][!Update][!Redraw]
+ LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!SetVariable Display_Result [m.Operator_DOT]][!SetVariable Display_Between "#Display_Between#."][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]
 
 [shape.Number_0]
  Meter                            = SHAPE
@@ -627,4 +645,4 @@
  Group                            = #calculator#
  Hidden                           = #Calculator_State#
  DynamicVariables                 = 1
- LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!Update][!SetVariable Display_Result [m.Number_0]][!SetVariable Display_Between "#Display_Between#0"][!Update][!Redraw]
+ LeftMouseUpAction                = [!UpdateMeasure m.Operator_AC][!SetVariable Display_Result [m.Number_0]][!SetVariable Display_Between "#Display_Between#0"][!UpdateMeasureGroup #calculator#][!UpdateMeterGroup #calculator#][!Redraw]

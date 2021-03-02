@@ -1,8 +1,8 @@
 [Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.5b
+ Version                          = 2.1.6b
  Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
- License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
+ License                          = Creative Commons Attribution-Non-Commercial-Share Alike 4.0
  Information                      = User-defined settings
 
 [Variables]
@@ -88,7 +88,7 @@
 
 ; - Other HW
 
- Bluetooth_State                 = 1
+ Bluetooth_State                 = 0
  Bluetooth_Visible               =1
  Audio_Devices_State             =1
  VRAM_Instance_State             =0
@@ -199,17 +199,17 @@
 
 ; - #Aurora_BG_Behaviour_State# determines BG MouseOver\Leave behaviour
 
- Settings_Menu                   = 1
+ Settings_Menu                   = 0
  Aurora_BG_Behaviour_State       = 0
 
 ; - The next variables controls the menu bookmarks
 
 ; - #Settings_Close# it's about X (close) button
 
- Settings_Main                   = 1
- Settings_Color                  = 1
- Settings_Hardware               = 1
- Settings_Behaviour              = 1
+ Settings_Main                   =1
+ Settings_Color                  =1
+ Settings_Hardware               =1
+ Settings_Behaviour              =1
  Settings_Close                  = 1
 
 ; - "Temporary" variables that controls switcher between main texts and menu texts
@@ -221,7 +221,7 @@
 
 ; - #Settings_Temp_Control# controls [f.Temp_Vars_State] formula
 
- Settings_Temp_Control           = 1
+ Settings_Temp_Control           =1
 
 ; --- DEPRECATED
 
@@ -242,7 +242,7 @@
  B_Color                          = 
  A_Color                          = 
 
- RGB_Color                        = 178, 231 , 241
+ RGB_Color                        =124, 12 , 239
  RGB_Font_Color                   =255, 255, 255
  RGB_Font_Warning_Color           = 
  Global_Color                     =#RGB_Color#, #Global_Alpha#
@@ -251,9 +251,9 @@
 
  BG_Color                         =0, 0, 0, 160
 
- Font_Color                       = 242, 210 , 203, 255
- Font_Value_Color                 = 233, 203, 242, 255
- Font_Warning_Color               = 215, 242 , 167, 255 
+ Font_Color                       =0, 240 , 215, 255
+ Font_Value_Color                 =0, 240, 117, 255
+ Font_Warning_Color               =240, 24 , 222, 255 
 
  Global_Alpha                     =220
  Font_Alpha                       =255
@@ -266,14 +266,14 @@
 
 ; - It needs for returning to your current scheme when mouse left out of a color buttons
 
- Last_Global_Color                = 178, 231 , 241 
+ Last_Global_Color                =124, 12 , 239 
  Last_Bar_Color                   = 
- Last_BG_Color                    = 178, 231 , 241
+ Last_BG_Color                    =124, 12 , 239
  Last_RGB_Color                   = 
- Last_RGB_Font_Color              = 242, 210 , 203 
- Last_Font_Color                  = 242, 210 , 203 
- Last_Value_Color                 = 233, 203, 242, 255 
- Last_Warning_Color               = 215, 242 , 167
+ Last_RGB_Font_Color              =0, 240 , 215 
+ Last_Font_Color                  =#Default_Last_Font_Color# 
+ Last_Value_Color                 =0, 240, 117, 255 
+ Last_Warning_Color               =240, 24 , 222
  Last_FontColor                   =#Font_Color#
  Last_Font_Size                   =10
 

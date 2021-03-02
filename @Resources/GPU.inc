@@ -1,8 +1,8 @@
 ﻿[Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.5b
+ Version                          = 2.1.6b
  Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
- License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
+ License                          = Creative Commons Attribution-Non-Commercial-Share Alike 4.0
  Information                      = All GPU Meters, measures, bars, graphs, text in section 7
  
 ; --- MEASURES
@@ -18,7 +18,7 @@
  MaxValue                         = 100
  DynamicVariables                 = 1
  Group                            = #gpu# | #gpu_sensors# | #sensors#
-     onChangeAction               = [!UpdateMeter text.dynamic.GPU_LOAD_VALUE][!UpdateMeter bar.GPU_LOAD][!UpdateMeter histogram.GPU_LOAD]
+     onUpdateAction               = [!UpdateMeter text.dynamic.GPU_LOAD_VALUE][!UpdateMeter bar.GPU_LOAD][!UpdateMeter histogram.GPU_LOAD][!UpdateMeter text.dynamic.GPU_TEMPERATURE_VALUE][!UpdateMeter bar.GPU_TEMPERATURE][!UpdateMeter histogram.GPU_TEMPERATURE]
      
      ifCondition                  = sensor.GPU_LOAD < #GPU_Load_Max#
           ifTrueAction            = [!SetOption text.dynamic.GPU_LOAD_VALUE FontColor "#Font_Value_Color#"]
@@ -37,7 +37,7 @@
  MaxValue                         = 100
  DynamicVariables                 = 1
  Group                            = #gpu# | #gpu_sensors# | #sensors#
-     onChangeAction               = [!UpdateMeter text.dynamic.GPU_TEMPERATURE_VALUE][!UpdateMeter bar.GPU_TEMPERATURE][!UpdateMeter histogram.GPU_TEMPERATURE]
+;     onChangeAction               = [!UpdateMeter text.dynamic.GPU_TEMPERATURE_VALUE][!UpdateMeter bar.GPU_TEMPERATURE][!UpdateMeter histogram.GPU_TEMPERATURE]
 
      ifCondition                  = sensor.GPU_TEMPERATURE < #GPU_Temp_Max#
           ifTrueAction            = [!SetOption text.dynamic.GPU_TEMPERATURE_VALUE FontColor "#Font_Value_Color#"]

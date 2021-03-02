@@ -1,8 +1,8 @@
 [Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.5b
+ Version                          = 2.1.6b
  Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
- License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
+ License                          = Creative Commons Attribution-Non-Commercial-Share Alike 4.0
  Information                      = Settings module. Includes some meters and most variables to configure the skin.
 
 ; --- MEASURES BEGINNING
@@ -152,43 +152,43 @@
 
 ; - Sets #App_Volume_1# - for "AppVolume" plugin to CONTROLL APP
 
- Command3                         = [!WriteKeyValue Variables App_Volume_1 " $UserInput$.exe" "#@#\AppVolumeControl.inc"] DefaultValue="#App_Volume_1#" X=968 W=50 H=14 Y="(#Pad_Top#+35)"
- Command4                         = [!SetVariable App_Volume_1 [m.Input_Main].exe]
+ Command3                         = [!WriteKeyValue Variables App_Volume_1 " $UserInput$.exe" "#@#\#Config#"] DefaultValue="#App_Volume_1#" X=968 W=50 H=14 Y="(#Pad_Top#+35)"
+ Command4                         = [!SetVariable App_Volume_1 [m.Input_Main].exe][!SetVariable Skin_Zpos "#Last_Zpos#"][!Zpos "#Skin_Zpos#" "AuroraBar\Bar"][!UpdateMeasureGroup #app_volume_controls_static#][!UpdateMeterGroup #app_volume_controls_static#][!UpdateMeterGroup #settings_main#][!Redraw]
 
 ; - Sets #App_Volume_2# - for "AppVolume" plugin to CONTROLL APP
 
- Command5                         = [!WriteKeyValue Variables App_Volume_2 " $UserInput$.exe" "#@#\AppVolumeControl.inc"] DefaultValue="#App_Volume_2#" X=968 W=50 H=14 Y="(#Pad_Top#+52)"
- Command6                         = [!SetVariable App_Volume_2 [m.Input_Main].exe]
+ Command5                         = [!WriteKeyValue Variables App_Volume_2 " $UserInput$.exe" "#@#\#Config#"] DefaultValue="#App_Volume_2#" X=968 W=50 H=14 Y="(#Pad_Top#+52)"
+ Command6                         = [!SetVariable App_Volume_2 [m.Input_Main].exe][!SetVariable Skin_Zpos "#Last_Zpos#"][!Zpos "#Skin_Zpos#" "AuroraBar\Bar"][!UpdateMeasureGroup #app_volume_controls_static#][!UpdateMeterGroup #app_volume_controls_static#][!UpdateMeterGroup #settings_main#][!Redraw]
 
 ; - Sets #App_Volume_3# - for "AppVolume" plugin to CONTROLL APP
 
- Command7                         = [!WriteKeyValue Variables App_Volume_3 " $UserInput$.exe" "#@#\AppVolumeControl.inc"] DefaultValue="#App_Volume_3#" X=968 W=50 H=14 Y="(#Pad_Top#+69)"
- Command8                         = [!SetVariable App_Volume_3 [m.Input_Main].exe]
+ Command7                         = [!WriteKeyValue Variables App_Volume_3 " $UserInput$.exe" "#@#\#Config#"] DefaultValue="#App_Volume_3#" X=968 W=50 H=14 Y="(#Pad_Top#+69)"
+ Command8                         = [!SetVariable App_Volume_3 [m.Input_Main].exe][!SetVariable Skin_Zpos "#Last_Zpos#"][!Zpos "#Skin_Zpos#" "AuroraBar\Bar"][!UpdateMeasureGroup #app_volume_controls_static#][!UpdateMeterGroup #app_volume_controls_static#][!UpdateMeterGroup #settings_main#][!Redraw]
 
 ; - Sets #App_Volume_4# - for "AppVolume" plugin to CONTROLL APP
 
- Command9                         = [!WriteKeyValue Variables App_Volume_4 " $UserInput$.exe" "#@#\AppVolumeControl.inc"] DefaultValue="#App_Volume_4#" X=968 W=50 H=14 Y="(#Pad_Top#+86)"
- Command10                        = [!SetVariable App_Volume_4 [m.Input_Main].exe]
+ Command9                         = [!WriteKeyValue Variables App_Volume_4 " $UserInput$.exe" "#@#\#Config#"] DefaultValue="#App_Volume_4#" X=968 W=50 H=14 Y="(#Pad_Top#+86)"
+ Command10                        = [!SetVariable App_Volume_4 [m.Input_Main].exe][!SetVariable Skin_Zpos "#Last_Zpos#"][!Zpos "#Skin_Zpos#" "AuroraBar\Bar"][!UpdateMeasureGroup #app_volume_controls_static#][!UpdateMeterGroup #app_volume_controls_static#][!UpdateMeterGroup #settings_main#][!Redraw]
 
 ; - Sets #App_Volume_1S# - for "AppVolume" plugin to DISPLAY APP NAME
 
- Command11                        = [!WriteKeyValue Variables App_Volume_1S " $UserInput$" "#@#\AppVolumeControl.inc"] DefaultValue="#App_Volume_1S#" X=968 W=50 H=14 Y="(#Pad_Top#+35)"
- Command12                        = [!SetVariable App_Volume_1S [m.Input_Main]]
+ Command11                        = [!WriteKeyValue Variables App_Volume_1S " $UserInput$" "#@#\#Config#"] DefaultValue="#App_Volume_1S#" X=968 W=50 H=14 Y="(#Pad_Top#+35)"
+ Command12                        = [!SetVariable App_Volume_1S [m.Input_Main]][!SetVariable Skin_Zpos "#Last_Zpos#"][!Zpos "#Skin_Zpos#" "AuroraBar\Bar"][!UpdateMeasureGroup #app_volume_controls_static#][!UpdateMeterGroup #app_volume_controls_static#][!UpdateMeterGroup #settings_main#][!Redraw]
  
 ; - Sets #App_Volume_2S# - for "AppVolume" plugin to DISPLAY APP NAME
 
- Command13                        = [!WriteKeyValue Variables App_Volume_2S " $UserInput$" "#@#\AppVolumeControl.inc"] DefaultValue="#App_Volume_2S#" X=968 W=50 H=14 Y="(#Pad_Top#+52)"
- Command14                        = [!SetVariable App_Volume_2S [m.Input_Main]]
+ Command13                        = [!WriteKeyValue Variables App_Volume_2S " $UserInput$" "#@#\#Config#"] DefaultValue="#App_Volume_2S#" X=968 W=50 H=14 Y="(#Pad_Top#+52)"
+ Command14                        = [!SetVariable App_Volume_2S [m.Input_Main]][!SetVariable Skin_Zpos "#Last_Zpos#"][!Zpos "#Skin_Zpos#" "AuroraBar\Bar"][!UpdateMeasureGroup #app_volume_controls_static#][!UpdateMeterGroup #app_volume_controls_static#][!UpdateMeterGroup #settings_main#][!Redraw]
 
 ; - Sets #App_Volume_3S# - for "AppVolume" plugin to DISPLAY APP NAME
 
- Command15                        = [!WriteKeyValue Variables App_Volume_3S " $UserInput$" "#@#\AppVolumeControl.inc"] DefaultValue="#App_Volume_3S#" X=968 W=50 H=14 Y="(#Pad_Top#+69)"
- Command16                        = [!SetVariable App_Volume_3S [m.Input_Main]]
+ Command15                        = [!WriteKeyValue Variables App_Volume_3S " $UserInput$" "#@#\#Config#"] DefaultValue="#App_Volume_3S#" X=968 W=50 H=14 Y="(#Pad_Top#+69)"
+ Command16                        = [!SetVariable App_Volume_3S [m.Input_Main]][!SetVariable Skin_Zpos "#Last_Zpos#"][!Zpos "#Skin_Zpos#" "AuroraBar\Bar"][!UpdateMeasureGroup #app_volume_controls_static#][!UpdateMeterGroup #app_volume_controls_static#][!UpdateMeterGroup #settings_main#][!Redraw]
 
 ; - Sets #App_Volume_4S# - for "AppVolume" plugin to DISPLAY APP NAME
 
- Command17                        = [!WriteKeyValue Variables App_Volume_4S " $UserInput$" "#@#\AppVolumeControl.inc"] DefaultValue="#App_Volume_4S#" X=968 W=50 H=14 Y="(#Pad_Top#+86)"
- Command18                        = [!SetVariable App_Volume_4S [m.Input_Main]]
+ Command17                        = [!WriteKeyValue Variables App_Volume_4S " $UserInput$" "#@#\#Config#"] DefaultValue="#App_Volume_4S#" X=968 W=50 H=14 Y="(#Pad_Top#+86)"
+ Command18                        = [!SetVariable App_Volume_4S [m.Input_Main]][!SetVariable Skin_Zpos "#Last_Zpos#"][!Zpos "#Skin_Zpos#" "AuroraBar\Bar"][!UpdateMeasureGroup #app_volume_controls_static#][!UpdateMeterGroup #app_volume_controls_static#][!UpdateMeterGroup #settings_main#][!Redraw]
 
 ; - Sets UPDATE RATE value
 
@@ -687,8 +687,8 @@
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
  LeftMouseDownAction              = [!SetVariable Last_Zpos "#Skin_Zpos#"][!Zpos "0" "AuroraBar\Bar"]
- LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 3-4"][!Update]
- RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 11-12"][!Update]
+ LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 3-4"]
+ RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 11-12"]
 
 [text.Main_Settings_APP_VOLUME_1_Value]
  Meter                            = STRING
@@ -704,8 +704,8 @@
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
  LeftMouseDownAction              = [!SetVariable Last_Zpos "#Skin_Zpos#"][!Zpos "0" "AuroraBar\Bar"]
- LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 3-4"][!Update]
- RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 11-12"][!Update]
+ LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 3-4"]
+ RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 11-12"]
  MouseScrollUpAction              = 
  MouseScrollDownAction            = 
 
@@ -720,8 +720,8 @@
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
  LeftMouseDownAction              = [!SetVariable Last_Zpos "#Skin_Zpos#"][!Zpos "0" "AuroraBar\Bar"]
- LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 5-6"][!Update]
- RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 13-14"][!Update]
+ LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 5-6"]
+ RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 13-14"]
 
 [text.Main_Settings_APP_VOLUME_2_Value]
  Meter                            = STRING
@@ -737,8 +737,8 @@
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
  LeftMouseDownAction              = [!SetVariable Last_Zpos "#Skin_Zpos#"][!Zpos "0" "AuroraBar\Bar"]
- LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 5-6"][!Update]
- RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 13-14"][!Update]
+ LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 5-6"]
+ RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 13-14"]
  MouseScrollUpAction              = 
  MouseScrollDownAction            = 
 
@@ -753,8 +753,8 @@
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
  LeftMouseDownAction              = [!SetVariable Last_Zpos "#Skin_Zpos#"][!Zpos "0" "AuroraBar\Bar"]
- LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 7-8"][!Update]
- RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 15-16"][!Update]
+ LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 7-8"]
+ RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 15-16"]
 
 [text.Main_Settings_APP_VOLUME_3_Value]
  Meter                            = STRING
@@ -770,8 +770,8 @@
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
  LeftMouseDownAction              = [!SetVariable Last_Zpos "#Skin_Zpos#"][!Zpos "0" "AuroraBar\Bar"]
- LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 7-8"][!Update]
- RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 15-16"][!Update]
+ LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 7-8"]
+ RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 15-16"]
  MouseScrollUpAction              = 
  MouseScrollDownAction            = 
 
@@ -786,8 +786,8 @@
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
  LeftMouseDownAction              = [!SetVariable Last_Zpos "#Skin_Zpos#"][!Zpos "0" "AuroraBar\Bar"]
- LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 9-10"][!Update]
- RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 17-18"][!Update]
+ LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 9-10"]
+ RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 17-18"]
 
 [text.Main_Settings_APP_VOLUME_4_Value]
  Meter                            = STRING
@@ -803,8 +803,8 @@
  Group                            = #settings_main#
  Hidden                           = #Settings_Main#
  LeftMouseDownAction              = [!SetVariable Last_Zpos "#Skin_Zpos#"][!Zpos "0" "AuroraBar\Bar"]
- LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 9-10"][!Update]
- RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 17-18"][!Update]
+ LeftMouseUpAction                = [!CommandMeasure m.Input_Main "ExecuteBatch 9-10"]
+ RightMouseUpAction               = [!CommandMeasure m.Input_Main "ExecuteBatch 17-18"]
  MouseScrollUpAction              = 
  MouseScrollDownAction            = 
 

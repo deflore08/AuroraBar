@@ -1,8 +1,8 @@
 ﻿[Metadata]
  Name                             = AuroraBar
- Version                          = 2.1.5b
+ Version                          = 2.1.6b
  Author                           = deflore08 (deflore08@daid-art.online) | https://www.deviantart.com/deflore08
- License                          = Creative Commons Attribution-Non-Commercial-Share Alike 3.0
+ License                          = Creative Commons Attribution-Non-Commercial-Share Alike 4.0
  Information                      = All CPU meters, measures, bars, graphs, text and other. It's 3, 4, 6 and 7 sections.
 
 ; --- MEASURES BEGINNING
@@ -56,7 +56,7 @@
  MaxValue                         = 97
  DynamicVariables                 = 1
  Group                            = #cpu# | #cpu_sensors# | #sensors#
-     onChangeAction               = [!UpdateMeter text.dynamic.CPU_TEMPERATURE_VALUE][!UpdateMeter bar.CPU_TEMPERATURE][!UpdateMeter histogram.CPU_TEMPERATURE]
+;     onChangeAction               = [!UpdateMeter text.dynamic.CPU_TEMPERATURE_VALUE][!UpdateMeter bar.CPU_TEMPERATURE][!UpdateMeter histogram.CPU_TEMPERATURE]
 
      ifCondition                  = sensor.CPU_TEMPERATURE < #CPU_Temp_Max#
           ifTrueAction            = [!SetOption text.dynamic.CPU_TEMPERATURE_VALUE FontColor "#Font_Value_Color#"][!SetVariable CPU_Temp_Health "0"]
@@ -76,7 +76,7 @@
  MaxValue                         = 100
  DynamicVariables                 = 1
  Group                            = #cpu# | #cpu_sensors# | #sensors#
-     onChangeAction               = [!UpdateMeter text.dynamic.CPU_LOAD_VALUE][!UpdateMeter bar.CPU_LOAD][!UpdateMeter histogram.CPU_LOAD][!UpdateMeasureGroup #cpu_cores#]
+     onUpdateAction               = [!UpdateMeter text.dynamic.CPU_LOAD_VALUE][!UpdateMeter bar.CPU_LOAD][!UpdateMeter histogram.CPU_LOAD][!UpdateMeasureGroup #cpu_cores#][!UpdateMeter text.dynamic.CPU_TEMPERATURE_VALUE][!UpdateMeter bar.CPU_TEMPERATURE][!UpdateMeter histogram.CPU_TEMPERATURE]
 
      ifCondition                  = sensor.CPU_LOAD < #CPU_Load_Max#
           ifTrueAction            = [!SetOption text.dynamic.CPU_LOAD_VALUE FontColor "#Font_Value_Color#"][!SetVariable CPU_Load_Health "0"]
